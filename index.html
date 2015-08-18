@@ -4,9 +4,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>關於我</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script type="text/javascript" src="//code.jquery.com/jquery-2.1.4.min.js"></script>
   </head>
   <style type="text/css">
   body{text-align:center;}
+  h4{margin-bottom:3px;}
+  dd:before{content:"※ ";}
   </style>
   <body>
   	<div id="wrapper" style="width:800px;margin: 0 auto; text-align:left;">
@@ -47,7 +50,7 @@
 				<h3>技能</h3>
 				<dl>
 					<dt>程式語言</dt>
-					<dd>熟悉：PHP、JavaSript、HTML</dd>
+					<dd>熟悉：PHP、JavaScript、HTML</dd>
 					<dd>略通：Perl、Python</dd>
 				</dl>
 				<dl>
@@ -73,31 +76,69 @@
 		<h4><a href="http://yahoo-emarketing.tumblr.com/">雅虎數位行銷有限公司（Yahoo!奇摩）</a></h4>
 		<dl>
 			<dt>工程師(派遣，2012/05~2013/05)</dt>
+			<dd>使用 PHP 和 MySQL 產生業績報表，並組成 Excel 寄給經銷商參考</dd>
+			<dd>活動網頁及相關工具開發</dd>
 		</dl>
-		<h4>露天市集國際資訊股份有限公司</h4>
+		<h4>露天市集國際資訊股份有限公司(<a href="http://www.ruten.com.tw/">露天拍賣</a>)</h4>
 		<dl>
 			<dt>工程師(2011/05~2012/04)</dt>
+			<dd>使用 PHP 與 Oracle 進行網站功能開發維護</dd>
+			<dd>與其他合作企業進行資料交換處理(透過FTP等)</dd>
 		</dl>
-		<h4>樂屋國際資訊股份有限公司</h4>
+		<h4>樂屋國際資訊股份有限公司(<a href="http://www.rakuya.com.tw/">樂屋網</a>)</h4>
 		<dl>
 			<dt>工程師(2008/08~2011/04)</dt>
+			<dd>使用 PHP 與 MySQL 開發維護網站功能(包含前端呈現與後端資料處理)</dd>
+			<dd>處理日常與各大房仲商的房屋物件資料交換處理(透過FTP、HTTP POST或是SOAP)</dd>
 		</dl>
-		<h4>亞普達國際電子商務股份有限公司</h4>
+		<h4><a href="http://chinese.allproducts.com.tw/">亞普達國際電子商務股份有限公司</a></h4>
 		<dl>
 			<dt>工程師(2007/03~2008/06)</dt>
+			<dd>主要使用 PHP 與 MySQL 開發公司內部使用的工具</dd>
 		</dl>
 		<h4>瑞奇科技</h4>
 		<dl>
 			<dt>工程師(2006/09~2007/02)</dt>
+			<dd>負責公司網站主機維護</dd>
+			<dd>負責公司網站內容更新</dd>
 		</dl>
 
 		<h3>個人作品介紹</h3>
 		<h4><a href="https://chrome.google.com/webstore/detail/ha2tw%E6%8F%90%E4%BE%9B%E7%9A%84%E7%B8%AE%E7%B6%B2%E5%9D%80%E5%B7%A5%E5%85%B7/hmnmebggbipndpobodcdooilmlmmgfoc?utm_source=chrome-ntp-icon">ha2.tw提供的縮網址工具</a></h4>
 		<dl>
 			<dt>Chrome 瀏覽器擴充套件</dt>
-			<dd></dd>
+			<dd>當使用者按下右鍵選擇縮網址時，會直接打<a href="http://ha2.tw/shortener">我網站上的 API</a> 取得縮網址的結果</dd>
+			<dd>該擴充工具使用 javascript 與 Chrome 瀏覽器所提供的 API 完成</dd>
 		</dl>
 
+		<h4><a href="http://ha2.tw/webshot">網頁截圖</a></h4>
+		<dl>
+			<dt>網頁截圖工具</dt>
+			<dd>前端網頁將網址 POST 到後端後，使用寫好的腳本，透過 <a href="http://phantomjs.org/">PhantomJS</a> 進行截圖(標準尺寸為1024x768)</dd>
+			<dd>並且提供歷史截圖列表可以做為變更依據</dd>
+		</dl>
+
+		<h4><a href="http://ha2.tw/cpc">中油油價變動</a>與<a href="http://ha2.tw/energy">台電用電量資料統計</a></h4>
+		<dl>
+			<dt>網頁爬蟲</dt>
+			<dd>使用 phpQuery 將指定網頁上的內容解析出來後塞回資料庫</dd>
+			<dd>並將這些爬好的資料直接呈現或使用 <a href="https://developers.google.com/chart/interactive/docs/reference">Google Visualization API</a> 呈現。</dd>
+		</dl>
+
+		<h4><a href="http://neko.maid.tw/">難以名狀的抓圖器</a></h4>
+		<dl>
+			<dt>網頁爬蟲</dt>
+			<dd>使用者拋送網站代碼及作品ID，爬蟲會及時解析圖片位址和標題等資訊，並根據擷取到的圖片位址抓取圖片檔案並丟至 <a href="https://aws.amazon.com/tw/s3/">AWS S3</a> 儲放</dd>
+			<dd>前端網站的出圖由 <a href="https://aws.amazon.com/tw/cloudfront/">AWS CloudFront</a> 串聯 AWS S3 負責，提升全球各地的存取速度。</dd>
+		</dl>
   	</div>
+  	<scrtpt type="text/javascript">
+  	$(function(){
+  		$('a').on('click', function(e){
+  			e.preventDefault();
+  			window.open($(this).attr('href'), '_ex_detail');
+  		});
+  	});
+  	</scrtpt>
   </body>
 </html>
