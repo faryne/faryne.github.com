@@ -1,0 +1,42 @@
+<!doctype html >
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Facebook 專頁閱讀器</title>
+	<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+	<div id="container" class="container-fluid">
+		<nav id="header" class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand">Facebook 專頁閱讀器</a>
+				</div>
+				<p id="loading" class="navbar-text"><i class="fa fa-circle-o-notch fa-spin"></i>載入中......</p>
+				<ul id="login_status"class="nav navbar-nav navbar-right">
+					<li><img src="https://static.xx.fbcdn.net/rsrc.php/v1/yi/r/odA9sNLrE86.jpg"></li>
+				</ul>
+			</div>
+		</nav>
+
+		<div id="middle">
+			<div id="content" class="show row-fluid">
+				<div id="pages_list" class="col-md-3">
+					<ul id="my_likes"></ul>
+				</div>
+				<div id="page_content" class="col-md-9">
+					<div id="page_title"></div>
+				</div>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+		<footer>
+			Powered By <a href="http://ha2.tw/">ha2.tw</a> / <a href="http://www.faryne.tw/">Faryne</a>
+		</footer>
+	</div>
+<script type="text/javascript" src="//cdn.rawgit.com/kvz/phpjs/master/functions/strings/nl2br.js"></script>
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
