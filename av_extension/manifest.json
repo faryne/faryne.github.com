@@ -1,0 +1,17 @@
+{
+    "manifest_version": 2,
+    "version": "1.1",
+    "name": "AV 女優換圖",
+    "description": "沒用的東西",
+    "background": {
+        "page": "background.html"
+    },
+    "permissions": [
+        "http://d9ymae9qjseyw.cloudfront.net/", "tabs"
+    ],
+    "content_scripts": [{
+            "matches": ["<all_urls>"],
+            "js": ["av.js"],
+            "css": []
+        }]
+}
