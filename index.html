@@ -5,11 +5,13 @@
     <title>關於我</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <script type="text/javascript" src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
   </head>
   <style type="text/css">
   body{text-align:center;}
   h4{margin-bottom:3px;}
   dd:before{content:"※ ";}
+  #github-icon{color:#000;font-size:23px;display:block}
   </style>
   <body>
   	<div id="wrapper" style="width:800px;margin: 0 auto; text-align:left;">
@@ -24,8 +26,9 @@
 				</tr>
 				<tr>
 					<td>
-						個人網站：<a href="http://ha2.tw/">ha2.tw</a> / <a href="http://program.faryne.tw/">faryne.tw</a><br>
+						個人網站：<a href="https://ha2.tw/">ha2.tw</a> / <a href="http://program.faryne.tw/">faryne.tw</a><br>
 						<img src="mail.png">
+						<a href="https://github.com/faryne" id="github-icon"><i class="fab fa-github-square"></i></a>
 					</td>
 				</tr>
 			</tbody>
@@ -33,9 +36,9 @@
 
 		<div class="row">
 			<h3>個人介紹</h3>
-			<p>我是謝育典，主要專長是網站開發，使用技術為 PHP 與 MySQL，經驗大約八年。工作上前後端皆有碰觸，但主要以後端為主。</p>
+			<p>我是謝育典，主要專長是網站開發，使用技術為 PHP 與 MySQL，經驗大約十年。工作上前後端皆有碰觸，但主要以後端為主。</p>
 			<p>除了 PHP 與 MySQL 的組合外，Python、Perl 及 Oracle DB 還算略通。</p>
-			<p>在開發語言與資料庫外，我也有一點簡單的系統管理經驗。目前在 AWS EC2、<a href="http://http://azure.microsoft.com//">Microsoft Azure</a> 與 <a href="http://www.digitalocean.com/">DigitalOcean</a> 有幾台實驗用的 VPS</p>
+			<p>在開發語言與資料庫外，我也有一點簡單的系統管理經驗。目前在 AWS EC2、<a href="http://http://azure.microsoft.com/">Microsoft Azure</a> 與 <a href="http://www.digitalocean.com/">DigitalOcean</a> 有幾台實驗用的 VPS</p>
 		</div>
 		
 		
@@ -69,8 +72,8 @@
 				<dl>
 					<dt>雜項</dt>
 					<dd>作業系統：Linux(Ubuntu)</dd>
-					<dd>網站開發框架及常用函式庫：Codeigniter、JQuery</dd>
-					<dd>略通:AWS</dd>
+					<dd>網站開發框架及常用函式庫：Codeigniter、Laravel、Jquery</dd>
+					<dd>略通：<acronym title="Amazon Web Service">AWS</acronym> / <acronym title="Elasticsearch Logstast Kibana">ELK</acronym></dd>
 				</dl>
 			</div>
 		</div>
@@ -79,12 +82,14 @@
 		<h4>風尚數位科技股份有限公司（<a href="http://www.fashionguide.com.tw/">FashionGuide</a>）</h4>
 		<dl>
 			<dt>資深工程師（2017/10~至今）</dt>
-			<dd></dd>
+			<dd>維護公司使用的 AWS 服務，包括 EC2 / RDS 等</dd>
+			<dd>維護內部使用的 CI / CD 服務</dd>
+			<dd>協助系統程式開發，主要使用 PHP7 、 Laravel 5 與 MySQL</dd>
 		</dl>
 		<h4>全音樂股份有限公司（<a href="http://omusic.friday.tw/">friDay 音樂</a>）</h4>
 		<dl>
 			<dt>資深工程師（2016/06~2017/09）</dt>
-			<dd>負責系統底層開發實作，主要使用 PHP、MySQL、Redis / RabbitMQ 等工具</dd>
+			<dd>建立全新系統底層的開發實作，主要使用 PHP、MySQL、Redis / RabbitMQ 等工具</dd>
 			<dd>使用 ELK 建立 Log 分析機制</dd>
 		</dl>
 		<h4>新加坡商葆光資訊有限公司台灣分公司(<a href="http://www.asap.com.tw/">ASAP閃電購物網</a>)</h4>
@@ -138,19 +143,26 @@
 			<dd>並且提供歷史截圖列表可以做為變更依據</dd>
 		</dl>
 
-		<h4><a href="http://ha2.tw/cpc">中油油價變動</a>與<a href="http://ha2.tw/energy">台電用電量資料統計</a></h4>
+		<h4><a href="http://ha2.tw/energy">台電用電量資料統計</a></h4>
 		<dl>
 			<dt>網頁爬蟲</dt>
 			<dd>使用 phpQuery 將指定網頁上的內容解析出來後塞回資料庫</dd>
 			<dd>並將這些爬好的資料直接呈現或使用 <a href="https://developers.google.com/chart/interactive/docs/reference">Google Visualization API</a> 呈現。</dd>
 		</dl>
 
-		<h4><a href="http://neko.maid.tw/">難以名狀的抓圖器</a></h4>
+		<h4><a href="https://ha2.tw/ntpcfd">新北市消防局報案紀錄查詢</a></h4>
+		<dl>
+			<dt>網頁爬蟲</dt>
+			<dd>使用 Codeigniter 與 phpQuery 針對新北市消防局的報案查詢網站進行爬取</dd>
+			<dd>並將這些資料做初步的地標定位後以網站或 API 形式提供查詢</dd>
+		</dl>
+
+		<h4><a href="https://neko.maid.tw/">難以名狀的抓圖器</a></h4>
 		<dl>
 			<dt>網頁爬蟲</dt>
 			<dd>使用者拋送網站代碼及作品ID，爬蟲會及時解析圖片位址和標題等資訊，並根據擷取到的圖片位址抓取圖片檔案並丟至 <a href="https://aws.amazon.com/tw/s3/">AWS S3</a> 儲放</dd>
 			<dd>前端網站的出圖由 <a href="https://aws.amazon.com/tw/cloudfront/">AWS CloudFront</a> 串聯 AWS S3 負責，提升全球各地的存取速度。</dd>
-			<dd>並且使用 Solr 處理站內搜尋功能</dd>
+			<dd>並且使用 Elasticsearch 處理站內搜尋功能</dd>
 		</dl>
   	</div>
   	<script type="text/javascript">
@@ -161,5 +173,14 @@
   		});
   	});
   	</script>
+  	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-96598-10"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-96598-10');
+	</script>
   </body>
 </html>
