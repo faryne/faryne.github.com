@@ -1,31 +1,39 @@
-var imgs = document.getElementsByTagName('img');
-function get_imgs ()
+function replaceImages (sourceImages)
 {
-    var response = JSON.parse(request.responseText);
-    var imgs = [];
-    for (var i in response)
+    let elements = document.getElementsByTagName('img');
+    for (let i in elements)
     {
-        imgs.push(response[i].thumb);
-    }
-
-    var elements = document.getElementsByTagName('img');
-    for (var i in elements)
-    {
-        if (elements[i].width > 70 && elements[i].width < 200)
+        if (elements[i].width < elements[i].height)
         {
-            var key = Math.floor(Math.random()*imgs.length);
-            elements[i].src = imgs[key];
-            elements[i].style.height = "";
-            elements[i].removeAttribute('height');
+            let l = sourceImages.high.length - 1;
+            elements[i].src = sourceImages.high[Math.floor(Math.random() * l )];
+        } else {
+            let l = sourceImages.wide.length - 1;
+            elements[i].src = sourceImages.wide[Math.floor(Math.random() * l )];
         }
     }
 }
 
-var request;
-window.onload = function()
+
+async function getSourceImages () {
+    return await fetch("https://faryne.dev/api/opendata/dmm/video?tag=%E3%83%A1%E3%82%A4%E3%83%89").then(function(obj){
+        return obj.json();
+    }).then(function(obj){
+        let tmp = {
+            wide: [],
+            high: []
+        }
+        for (let i in obj.rows) {
+            tmp.high.push(obj.rows[i].thumb);
+            for (let j in obj.rows[i].images) {
+                tmp.wide.push(obj.rows[i].images[j].thumb);
+            }
+        }
+        return tmp;
+    });
+}
+window.onload = async function()
 {
-    request = new XMLHttpRequest();
-    request.onreadystatechange = get_imgs;
-    request.open('GET', 'https://d9ymae9qjseyw.cloudfront.net/dmm/ranking_online_weekly.json');
-    request.send();
+    let sourceImages = await getSourceImages();
+    replaceImages(sourceImages);
 };

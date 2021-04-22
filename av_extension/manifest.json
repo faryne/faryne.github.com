@@ -4,7 +4,7 @@
     "name": "AV 女優換圖",
     "description": "沒用的東西",
     "permissions": [
-        "https://d9ymae9qjseyw.cloudfront.net/"
+        "https://faryne.dev/"
     ],
     "content_scripts": [{
             "matches": ["<all_urls>"],
