@@ -26,7 +26,7 @@
 				</tr>
 				<tr>
 					<td>
-						個人網站：<a href="https://ha2.tw/">ha2.tw</a> / <a href="http://program.faryne.tw/">faryne.tw</a><br>
+						個人網站：<a href="https://ha2.tw/">ha2.tw</a> / <a href="https://blog.faryne.dev/">faryne.dev</a><br>
 						<img src="mail.png">
 						<a href="https://github.com/faryne" id="github-icon"><i class="fab fa-github-square"></i></a>
 					</td>
@@ -36,8 +36,8 @@
 
 		<div class="row">
 			<h3>個人介紹</h3>
-			<p>我是謝育典，主要專長是網站開發，使用技術為 PHP 與 MySQL，經驗大約十年。工作上前後端皆有碰觸，但主要以後端為主。</p>
-			<p>除了 PHP 與 MySQL 的組合外，Python、Perl 及 Oracle DB 還算略通。</p>
+			<p>我是謝育典，主要專長是網站開發以及系統管理。工作上前後端皆有碰觸，但多以後端為主。</p>
+			<p>除了 PHP 與 MySQL 的組合外，Python、Golang 及 Oracle DB 還算略通。</p>
 			<p>在開發語言與資料庫外，我也有一點簡單的系統管理經驗。目前在 AWS EC2、<a href="https://azure.microsoft.com/">Microsoft Azure</a> 與 <a href="https://www.digitalocean.com/">DigitalOcean</a> 有幾台實驗用的 VPS</p>
 		</div>
 		
@@ -62,8 +62,9 @@
 				<h3>技能</h3>
 				<dl>
 					<dt>程式語言</dt>
-					<dd>熟悉：PHP、JavaScript、HTML、CSS</dd>
-					<dd>略通：Perl、Python</dd>
+					<dd>JavaScript、HTML、CSS</dd>
+					<dd>PHP、Python、Golang</dd>
+					<dd>ShellScript</dd>
 				</dl>
 				<dl>
 					<dt>資料庫</dt>
@@ -72,15 +73,24 @@
 				<dl>
 					<dt>雜項</dt>
 					<dd>作業系統：Linux(Ubuntu)</dd>
-					<dd>網站開發框架及常用函式庫：Codeigniter、Laravel、Jquery</dd>
-					<dd>
-						略通：
-						<acronym title="Amazon Web Service">AWS</acronym> / <acronym title="Google Cloud Platform">GCP</acronym> / <acronym title="Elasticsearch Logstash Kibana">ELK</acronym></dd>
+					<dd>網站開發框架及常用函式庫：Codeigniter、Laravel、Gin、Fiber、jQuery、Vue.js</dd>
+					<dd>雲端服務：<acronym title="Amazon Web Service">AWS</acronym> / <acronym title="Google Cloud Platform">GCP</acronym></dd>
+					<dd>其他：<acronym title="Elasticsearch Logstash Kibana">ELK</acronym>、Docker、<acronym title="Kubernetes">K8S</acronym></acronym></dd>
+				</dl>
+				<dl>
+					<dt>證照</dt>
+					<dd>AWS Certified Solutions Architect Associate <a href-"https://www.credly.com/badges/4356d6ac-42bb-48b6-8d90-75e6978a8d77/embedded" target="_blank">連結</a></dd>
 				</dl>
 			</div>
 		</div>
 
 		<h3>工作經歷</h3>
+		<h4><a href="https://www.indochat.co.id" target="_blank">酷堤康科技股份有限公司</a></h4>
+		<dl>
+			<dt>Senior Backend Engineer（2019/10~）</dt>
+			<dd>負責設計建立維護公司所使用的雲端服務架構</dd>
+			<dd>負責維護專案使用的 CI / CD 機制</dd>
+		</dl>
 		<h4><a href="https://presslogic.com">香港商台灣邏輯媒體科技有限公司台灣分公司</a></h4>
 		<dl>
 			<dt>Web / Backend Engineer（2018/07~2019/08）</dt>
@@ -151,19 +161,26 @@
 			<dd>並且提供歷史截圖列表可以做為變更依據</dd>
 		</dl>
 
-		<h4><a href="http://ha2.tw/energy">台電用電量資料統計</a></h4>
+		<h4><a href="https://faryne-firebase.web.app/rates">主要銀行匯率查詢</a></h4>
+		<dl>
+			<dt>網頁爬蟲</dt>
+			<dd>後端使用 PHP 與 Laravel 至幾家主要銀行爬取匯率資料存入至資料庫。</dd>
+			<dd>前端透過 Vue 經由 API 撈取資料並顯示，網站託管在 Firebase Hosting 上。</dd>
+		</dl>
+
+		<!--<h4><a href="http://ha2.tw/energy">台電用電量資料統計</a></h4>
 		<dl>
 			<dt>網頁爬蟲</dt>
 			<dd>使用 phpQuery 將指定網頁上的內容解析出來後塞回資料庫</dd>
 			<dd>並將這些爬好的資料直接呈現或使用 <a href="https://developers.google.com/chart/interactive/docs/reference">Google Visualization API</a> 呈現。</dd>
-		</dl>
+		</dl>-->
 
-		<h4><a href="https://ha2.tw/ntpcfd">新北市消防局報案紀錄查詢</a></h4>
+		<!--<h4><a href="https://ha2.tw/ntpcfd">新北市消防局報案紀錄查詢</a></h4>
 		<dl>
 			<dt>網頁爬蟲</dt>
 			<dd>使用 Codeigniter 與 phpQuery 針對新北市消防局的報案查詢網站進行爬取</dd>
 			<dd>並將這些資料做初步的地標定位後以網站或 API 形式提供查詢</dd>
-		</dl>
+		</dl>-->
 
 		<h4><a href="https://neko.maid.tw/">難以名狀的抓圖器</a></h4>
 		<dl>
