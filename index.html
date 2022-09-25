@@ -107,6 +107,7 @@
 				<ul>
 					<li>使用 EventBridge 在指定時間點觸發啟動指定的 ECS Task 啟動開始執行，當執行完畢後即結束該工作。</li>
 					<li>工程師僅需按照規範撰寫所需程式碼及設定即可輕鬆部署</li>
+					<li>使用 Golang 設計 Job 運作環境，並撰寫部分 job 內容</li>
 				</ul>
 			</dd>
 			<dd>
@@ -119,6 +120,12 @@
 				負責維護專案使用的 CI / CD 機制，主要使用 TravisCI / Github Actions
 				<ul>
 					<li>主要撰寫每個專案包含單元測試、打包成 docker image 以及部署的腳本</li>
+				</ul>
+			</dd>
+			<dd>
+				支援後端寫些 API
+				<ul>
+					<li>在 <a href="https://github.com/gin-gonic/gin">Gin</a> 為主要框架的基礎上，使用 XORM 撰寫一些資料庫（串接 MySQL）的 CRUD API</li>
 				</ul>
 			</dd>
 		</dl>
@@ -139,7 +146,7 @@
 					<li>並根據需要撰寫 Logstash 相關設定檔以便資料同步。主要做的有從 MySQL 同步資料到 Elasticsearch 等</li>
 				</ul>
 			</dd>
-			<dd>維護公司使用的 CI / CD 服務，主要使用 Gitlab</dd>
+			<dd>支援後端撰寫 API，主要使用 PHP 7.3，並維護公司使用的 CI / CD 服務，主要使用 Gitlab</dd>
 		</dl>
 		<h4>風尚數位科技股份有限公司（<a href="https://www.fashionguide.com.tw/">FashionGuide</a>）</h4>
 		<dl>
@@ -229,12 +236,12 @@
 			<dd>使用 Laravel 5 與 Vue 撰寫前端網站</dd>
 		</dl>
 
-		<h4><a href="https://faryne-firebase.web.app/hololive">Vtuber 直播資訊彙整</a></h4>
+		<!-- <h4><a href="https://faryne-firebase.web.app/hololive">Vtuber 直播資訊彙整</a></h4>
 		<dl>
 			<dt>網頁爬蟲</dt>
 			<dd>使用 PHP 與 Google App Script 爬取官方網站藝人列表及直播時間資訊</dd>
 			<dd>直播事件時間可以寫入 Google Calendar</dd>
-		</dl>
+		</dl> -->
 		
 
 		<!--<h4><a href="http://ha2.tw/energy">台電用電量資料統計</a></h4>
@@ -259,6 +266,13 @@
 			<dd>並且使用 Elasticsearch 處理站內搜尋功能</dd>
 			<dd><a href="https://nekomaid.web.app/">新版網站</a>使用 Vue.js 撰寫</dd>
 		</dl>
+
+		<h3>個人 Github Repositories</h3>
+		<ul>
+			<li><a href="https://github.com/faryne/api.faryne.dev">https://github.com/faryne/api.faryne.dev</a>：以 Golang + <a href="https://github.com/gofiber/fiber">Fiber</a> + Google App Engine 為基礎的個人 API。</li>
+			<li><a href="https://github.com/faryne/ha2.tw">https://github.com/faryne/ha2.tw</a>：以 Vue 為基礎串連 API 顯示內容。</li>
+		</ul>
+
   	</div>
   	<script type="text/javascript">
   	$(function(){
