@@ -83,16 +83,49 @@
 		<h4><a href="https://www.indochat.co.id" target="_blank">QTComm Inc.</a></h4>
 		<dl>
 			<dt>Senior Backend Engineer（2019/10~2021/11）</dt>
-			<dd>Design & maintain AWS Cloud Infrastures using Cloudformation, inclusive of ECS Fargate, RDS, Cloudwatch, e.t.c. </dd>
-			<dd>Setup Grafana Monitor Dashboard</dd>
-			<dd>Monitor Service Status and Alert System</dd>
+			<dd>
+				Design & maintain AWS Cloud Infrastures using Cloudformation, inclusive of ECS Fargate, RDS, Cloudwatch, e.t.c. 
+				<ul>
+					<li>Using AWS Cloudformation and AWS CDK </li>
+					<li>API Service：Deploy API on ECS Fargate, setup cache service with Cloudfront, and configure autoscaling measures (by schedue / by CPU or memory usage).</li>
+					<li>Deployment of MQTT Cluster：Deployment MQTT Cluster on EC2, and use Global Accelerator to speed up connection speed.</li>
+					<li>Deployment of Static Site：Using S3 for storing static files and setup cloudfront for CDN Service.</li>
+					<li>Maintain configuration of Elasticache(Redis) and RDS Aurora(MySQL).</li>
+				</ul>
+			</dd>
+			<dd>
+				Design Crontab System using EventBridge
+				<ul>
+					<li>Desgin crontab runtime and deployment measures with golang</li>
+					<li>Setup job schedule rules on EventBridge.</li>
+				</ul>
+			</dd>
+			<dd>
+				Setup Grafana Monitor Dashboard and 
+				<ul>
+					<li>Using cloudwatch as datasource, show logs(API Service) and metrics on Grafana</li>
+					<li>Setup Alerts with Cloudwatch Metrics. When the metrics is over threshold, cloudwatch will trigger SNS and send alert to Slack</li>
+				</ul>
+			</dd>
 			<dd>Maintain CI/CD configuration based on TravisCI / Github Actions.</dd>
 		</dl>
 		<h4><a href="https://presslogic.com">Presslogic Ltd., Taiwan Branch</a></h4>
 		<dl>
 			<dt>Web / Backend Engineer（2018/07~2019/08）</dt>
-			<dd>Design Infrasture with GCP, inclusive GCE, Cloud SQL, e.t.c.</dd>
-			<dd>Setup data syncing service between MySQL and Elasticsearch with Logstash</dd>
+			<dd>
+				Design Infrasture with GCP, inclusive GCE, Cloud SQL, e.t.c.
+				<ul>
+					<li>Primarily using GCE, Cloud SQL (MySQL) and Memorystore (Redis)</li>
+					<li>Create and maintain shellscripts for booting script</li>
+				</ul>
+			</dd>
+			<dd>
+				Setup data syncing service between MySQL and Elasticsearch with Logstash
+				<ul>
+					<li>Create and maintain the configuration of Logstash</li>
+					<li>Sync data from MySQL to Elasticsearch</li>
+				</ul>
+			</dd>
 			<dd>Maintainment of CI / CD Service with Gitlab</dd>
 		</dl>
 		<h4>Fashionguide Inc.（<a href="http://www.fashionguide.com.tw/">FashionGuide</a>）</h4>
