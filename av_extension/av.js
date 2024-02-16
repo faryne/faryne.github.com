@@ -16,7 +16,7 @@ function replaceImages (sourceImages)
 
 
 async function getSourceImages () {
-    return await fetch("https://faryne.dev/api/opendata/dmm/video?tag=%E3%83%A1%E3%82%A4%E3%83%89").then(function(obj){
+    return await fetch("https://faryne.dev/api/opendata/dmm/video").then(function(obj){
         return obj.json();
     }).then(function(obj){
         let tmp = {

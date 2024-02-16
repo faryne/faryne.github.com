@@ -1,9 +1,9 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "version": "1.1",
     "name": "AV 女優換圖",
     "description": "沒用的東西",
-    "permissions": [
+    "host_permissions": [
         "https://faryne.dev/"
     ],
     "content_scripts": [{
