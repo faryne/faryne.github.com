@@ -36,4 +36,19 @@ window.onload = async function()
 {
     let sourceImages = await getSourceImages();
     replaceImages(sourceImages);
+    const imgTargets = document.querySelectorAll('img');
+    const observer = new MutationObserver(changes => {
+        changes.forEach(change => {
+            if(change.attributeName.includes('src')) {
+                if (change.target.width < change.target.height) {
+                    let l = sourceImages.high.length - 1;
+                    change.target.src = sourceImages.high[Math.floor(Math.random() * l )];
+                } else {
+                    let l = sourceImages.wide.length - 1;
+                    change.target.src = sourceImages.wide[Math.floor(Math.random() * l )];
+                }
+            }
+        })
+    })
+    imgTargets.forEach( i => observer.observe(i, {attributes: true}))
 };
