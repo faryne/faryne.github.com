@@ -2,11 +2,12 @@
 // @name           Indescribable Retriever
 // @namespace      tw.maid.neko
 // @description    Grab pixiv artwork and hosting in neko.maid.tw domain
-// @include        http://www.pixiv.net/member_illust.php?mode=medium&illust_id=*
-// @include        http://www.pixiv.net/member_illust.php?illust_id=*&mode=medium
-// @include        http://www.pixiv.com/works/*
-// @include        http://seiga.nicovideo.jp/seiga/*
-// @include        http://www.tinami.com/view/*
+// @include        https://www.pixiv.net/member_illust.php?mode=medium&illust_id=*
+// @include        https://www.pixiv.net/member_illust.php?illust_id=*&mode=medium
+// @include        https://www.pixiv.com/works/*
+// @include        https://www.pixiv.net/artworks/*
+// @include        https://seiga.nicovideo.jp/seiga/*
+// @include        https://www.tinami.com/view/*
 // @description    難以名狀的抓圖器，抓Pixiv/Nico靜畫/Tinami作品的小工具
 // @version        1.6
 // @grant          GM_xmlhttpRequest
@@ -17,7 +18,7 @@ var default_button_text = "難以名狀的抓圖器：開始抓圖";
 var finish_grabbed_text = "抓圖完成";
 
 function parse_id () {
-  var out = {site: '', id: ''}, qs, href, q;  
+  var out = {site: '', id: ''}, qs, href, q;
   // 先parse網站
   if (location.host.match('nicovideo.jp') != null) {
     out.site  = 'nico';
@@ -42,7 +43,7 @@ function parse_id () {
     qs  = href.split('/');
     out.id = qs[qs.length-1];
   }
-  
+
   return out;
 }
 
@@ -101,9 +102,9 @@ GM_xmlhttpRequest({
       };
       $('#ha2-shortener').css(main_css);
     }
-    
+
     // event binding
-    $('#ha2pixiv-grab').on("click", function(e){  
+    $('#ha2pixiv-grab').on("click", function(e){
       $('#ha2pixiv-grab').attr("disabled", "disabled").val("抓圖中");
       var domain = parse_id();
       switch (domain.site) {
@@ -112,7 +113,7 @@ GM_xmlhttpRequest({
         case 'tinami':
           GM_xmlhttpRequest({
             method:   "GET",
-            url:      "http://api.neko.maid.tw/retrieve.json?"+$.param({site: domain.site, artwork_id: domain.id, r: Math.random()}),
+            url:      "https://faryne.dev/api/opendata/nekomaidv2/api/retrieve.json?"+$.param({site: domain.site, artwork_id: domain.id, r: Math.random()}),
             onload:   function(response) {
                 eval("render("+response.responseText+");");
             }
@@ -122,7 +123,7 @@ GM_xmlhttpRequest({
           alert('error');
           break;
       }
-      
+
       e.preventDefault();
     });
   }
