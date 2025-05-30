@@ -112,8 +112,8 @@ GM_xmlhttpRequest({
         case 'nico':
         case 'tinami':
           GM_xmlhttpRequest({
-            method:   "GET",
-            url:      "https://faryne.dev/api/opendata/nekomaidv2/api/retrieve.json?"+$.param({site: domain.site, artwork_id: domain.id, r: Math.random()}),
+            method:   "POST",
+            url:      "https://neko.maid.tw/api/retrieve.json?"+$.param({site: domain.site, artwork_id: domain.id, r: Math.random()}),
             onload:   function(response) {
                 eval("render("+response.responseText+");");
             }
