@@ -222,6 +222,14 @@
 			<dd>該擴充工具使用 javascript 與 Chrome 瀏覽器所提供的 API 完成</dd>
 		</dl> -->
 
+		<h4><a href="https://beta.faryne.dev/tools/thread/capture">Threads 截圖工具</a></h4>
+		<dl>
+			<dt>截圖工具</dt>
+			<dd>傳入 Threads 貼文的網址，可擷取圖片並加上原討論串的 QR Code 後提供下載。</dd>
+			<dd>使用 ChromeDP 搭配 Headless Chrome 處理截圖功能</dd>
+			<dd>使用 OEmbed API 獲取 Threads 貼文內容及產生畫面</dd>
+		</dl>
+
 		<!--<h4><a href="http://ha2.tw/webshot">網頁截圖</a></h4>
 		<dl>
 			<dt>網頁截圖工具</dt>
@@ -229,26 +237,26 @@
 			<dd>並且提供歷史截圖列表可以做為變更依據</dd>
 		</dl>-->
 
-		<h4><a href="https://faryne-firebase.web.app/rates">主要銀行匯率查詢</a></h4>
+		<h4><a href="https://beta.faryne.dev/data/rates">主要銀行匯率查詢</a></h4>
 		<dl>
 			<dt>網頁爬蟲</dt>
 			<dd>後端使用 PHP 與 Laravel 至幾家主要銀行爬取匯率資料存入至資料庫。</dd>
 			<dd>前端透過 Vue 經由 API 撈取資料並顯示，網站託管在 Firebase Hosting 上。</dd>
 		</dl>
 
-		<h4><a href="https://faryne-firebase.web.app/tw-stats">主計總處各縣市指標</a></h4>
+		<h4><a href="https://beta.faryne.dev/data/tw-stats">主計總處各縣市指標</a></h4>
 		<dl>
 			<dt>網頁爬蟲</dt>
 			<dd>使用 Golang 抓取主計總處所提供 XML，並整理成 json 檔存入 <a href="https://github.com/faryne/tw-stats">Github</a></dd>
-			<dd>前端使用 Vuejs 搭配 Axios 即時抓取 Github 上面的紀錄與檔案顯示內容</dd>
+			<dd>前端使用 ReactJS 搭配 Axios 即時抓取 Github 上面的紀錄與檔案顯示內容</dd>
 		</dl>
 
-		<h4><a href="https://faryne.dev/dmm/video">DMM 影片 / 女優搜尋</a></h4>
+		<h4><a href="https://beta.faryne.dev/av/video">DMM 影片搜尋</a></h4>
 		<dl>
 			<dt>網頁爬蟲</dt>
 			<dd>使用 Golang 撰寫爬蟲爬取 Fanza （舊稱：DMM）上的影片及女優資料</dd>
 			<dd>資料透過 Logstash 定期從 MySQL 同步到 Elasticsearch</dd>
-			<dd>使用 Laravel 5 與 Vue 撰寫前端網站</dd>
+			<dd>使用 ReactJS 構建前端網站</dd>
 		</dl>
 
 		<!-- <h4><a href="https://faryne-firebase.web.app/hololive">Vtuber 直播資訊彙整</a></h4>
@@ -284,8 +292,7 @@
 
 		<h3>個人 Github Repositories</h3>
 		<ul>
-			<li><a href="https://github.com/faryne/api.faryne.dev">https://github.com/faryne/api.faryne.dev</a>：以 Golang + <a href="https://github.com/gofiber/fiber">Fiber</a> + Google App Engine 為基礎的個人 API。</li>
-			<li><a href="https://github.com/faryne/ha2.tw">https://github.com/faryne/ha2.tw</a>：以 Vue 為基礎串連 API 顯示內容。</li>
+			<li><a href="https://github.com/faryne/integration">前後端整合專案</a>，使用 Golang + Fiber 構建後端，前端則使用 ReactJS 構建。</li>
 		</ul>
 
   	</div>
