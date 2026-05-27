@@ -1,3 +1,17 @@
+// ==UserScript==
+// @name         AV 女優換圖
+// @namespace    http://faryne.dev/
+// @version      1.2.0
+// @description  自動將網頁中的圖片隨機替換為 AV 女優圖庫圖片（純屬娛樂）。
+// @author       Faryne
+// @match        *://*.chinatimes.com/*
+// @match        *://*.udn.com/*
+// @match        *://tw.news.yahoo.com/*
+// @grant        GM_xmlhttpRequest
+// @connect      faryne.dev
+// @run-at       document-idle
+// ==/UserScript==
+
 (() => {
     'use strict';
 
@@ -52,30 +66,39 @@
     /**
      * 獲取所有可用的替代圖片
      */
-    async function getSourceImages() {
-        try {
-            const response = await fetch(API_URL);
-            if (!response.ok) throw new Error(`Fetch failed: ${response.status}`);
-            
-            const data = await response.json();
-            const images = { wide: [], high: [] };
+    function getSourceImages() {
+        return new Promise((resolve) => {
+            GM_xmlhttpRequest({
+                method: "GET",
+                url: API_URL,
+                onload: (response) => {
+                    try {
+                        if (response.status !== 200) throw new Error(`Status ${response.status}`);
+                        const data = JSON.parse(response.responseText);
+                        const images = { wide: [], high: [] };
 
-            if (data.rows && Array.isArray(data.rows)) {
-                data.rows.forEach(row => {
-                    if (row.thumb) images.high.push(row.thumb);
-                    if (Array.isArray(row.images)) {
-                        row.images.forEach(img => {
-                            if (img.thumb) images.wide.push(img.thumb);
-                        });
+                        if (data.rows && Array.isArray(data.rows)) {
+                            data.rows.forEach(row => {
+                                if (row.thumb) images.high.push(row.thumb);
+                                if (Array.isArray(row.images)) {
+                                    row.images.forEach(img => {
+                                        if (img.thumb) images.wide.push(img.thumb);
+                                    });
+                                }
+                            });
+                        }
+                        resolve(images);
+                    } catch (error) {
+                        console.error("[AV Userscript] Parse error:", error);
+                        resolve({ wide: [], high: [] });
                     }
-                });
-            }
-
-            return images;
-        } catch (error) {
-            console.error("[AV Extension] Failed to get source images:", error);
-            return { wide: [], high: [] };
-        }
+                },
+                onerror: (error) => {
+                    console.error("[AV Userscript] Fetch error:", error);
+                    resolve({ wide: [], high: [] });
+                }
+            });
+        });
     }
 
     /**
