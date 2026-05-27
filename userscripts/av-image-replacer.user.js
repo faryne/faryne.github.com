@@ -5,6 +5,7 @@
 // @description  自動將網頁中的圖片隨機替換為 AV 女優圖庫圖片（純屬娛樂）。
 // @author       Faryne
 // @match        *://*.chinatimes.com/*
+// @match        *://udn.com/*
 // @match        *://*.udn.com/*
 // @match        *://tw.news.yahoo.com/*
 // @grant        GM_xmlhttpRequest
@@ -30,34 +31,57 @@
     }
 
     /**
-     * 替換單張圖片
-     * @param {HTMLImageElement} img 
+     * 替換單個元素（img 或 source）
+     * @param {HTMLElement} el 
      * @param {Object} sourceImages 
      */
-    function replaceImage(img, sourceImages) {
-        // 如果目前圖片的 src 就是我們剛設定的，則跳過（避免無限迴圈）
-        if (assignedUrls.get(img) === img.src) return;
+    function replaceElement(el, sourceImages) {
+        const currentVal = el.src || (el.srcset ? el.srcset.split(',')[0].split(' ')[0] : '');
+        if (assignedUrls.get(el) === currentVal) return;
 
         const performReplacement = () => {
-            // 再次檢查，防止在等待 load 期間已經被處理過
-            if (assignedUrls.get(img) === img.src) return;
+            const currentValNow = el.src || (el.srcset ? el.srcset.split(',')[0].split(' ')[0] : '');
+            if (assignedUrls.get(el) === currentValNow) return;
 
-            // 優先使用 naturalWidth/Height，如果還沒載入則使用 width/height
-            const w = img.naturalWidth || img.width;
-            const h = img.naturalHeight || img.height;
+            let w = 0, h = 0;
+            let targetImg = null;
 
-            const list = (w < h) ? sourceImages.high : sourceImages.wide;
+            if (el instanceof HTMLImageElement) {
+                targetImg = el;
+            } else if (el instanceof HTMLSourceElement && el.parentNode instanceof HTMLPictureElement) {
+                targetImg = el.parentNode.querySelector('img');
+            }
+
+            if (targetImg) {
+                w = targetImg.naturalWidth || targetImg.width;
+                h = targetImg.naturalHeight || targetImg.height;
+            }
+
+            // 如果無法取得寬高，預設使用 wide 列表
+            const list = (w !== 0 && h !== 0 && w < h) ? sourceImages.high : sourceImages.wide;
             const newSrc = getRandomElement(list);
 
             if (newSrc) {
-                img.src = newSrc;
-                assignedUrls.set(img, newSrc);
+                if (el instanceof HTMLImageElement) {
+                    el.src = newSrc;
+                    if (el.hasAttribute('srcset')) el.srcset = newSrc;
+                } else if (el instanceof HTMLSourceElement) {
+                    el.srcset = newSrc;
+                }
+                assignedUrls.set(el, newSrc);
             }
         };
 
-        // 如果圖片還沒載入且寬高都是 0，等它載入後再判斷比例
-        if (img.width === 0 && img.height === 0 && !img.complete) {
-            img.addEventListener('load', performReplacement, { once: true });
+        // 如果是 img 且尚未載入，等它載入後再判斷比例
+        if (el instanceof HTMLImageElement && el.width === 0 && el.height === 0 && !el.complete) {
+            el.addEventListener('load', performReplacement, { once: true });
+        } else if (el instanceof HTMLSourceElement && el.parentNode instanceof HTMLPictureElement) {
+            const img = el.parentNode.querySelector('img');
+            if (img && img.width === 0 && img.height === 0 && !img.complete) {
+                img.addEventListener('load', performReplacement, { once: true });
+            } else {
+                performReplacement();
+            }
         } else {
             performReplacement();
         }
@@ -111,11 +135,11 @@
 
         // 處理節點與其子節點中的所有圖片
         const processNode = (node) => {
-            if (node instanceof HTMLImageElement) {
-                replaceImage(node, sourceImages);
+            if (node instanceof HTMLImageElement || node instanceof HTMLSourceElement) {
+                replaceElement(node, sourceImages);
             } else if (node instanceof HTMLElement) {
-                const images = node.querySelectorAll('img');
-                images.forEach(img => replaceImage(img, sourceImages));
+                const elements = node.querySelectorAll('img, source');
+                elements.forEach(el => replaceElement(el, sourceImages));
             }
         };
 
@@ -124,10 +148,12 @@
             for (const mutation of mutations) {
                 if (mutation.type === 'childList') {
                     mutation.addedNodes.forEach(processNode);
-                } else if (mutation.type === 'attributes' && mutation.attributeName === 'src') {
-                    // 只有當新設定的 src 不是我們自己設定的，才需要重新處理
-                    if (assignedUrls.get(mutation.target) !== mutation.target.src) {
-                        replaceImage(mutation.target, sourceImages);
+                } else if (mutation.type === 'attributes') {
+                    const attr = mutation.attributeName;
+                    const target = mutation.target;
+                    const currentVal = target.src || (target.srcset ? target.srcset.split(',')[0].split(' ')[0] : '');
+                    if (assignedUrls.get(target) !== currentVal) {
+                        replaceElement(target, sourceImages);
                     }
                 }
             }
@@ -138,7 +164,7 @@
             childList: true,
             subtree: true,
             attributes: true,
-            attributeFilter: ['src']
+            attributeFilter: ['src', 'srcset']
         });
 
         // 處理現有的圖片
