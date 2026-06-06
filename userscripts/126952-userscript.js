@@ -240,8 +240,15 @@
           }
         });
 
-        const data = JSON.parse(response.responseText);
-        
+        let data;
+        try {
+          data = JSON.parse(response.responseText);
+        } catch (parseError) {
+          const contentType = response.responseHeaders?.match(/content-type:\s*([^\r\n]+)/i)?.[1] || "unknown";
+          const preview = String(response.responseText || "").slice(0, 120).trim();
+          throw new Error(`API 回傳非 JSON（HTTP ${response.status || "unknown"}, ${contentType}）：${preview || "無內容"}`);
+        }
+
         if (data.error) {
           throw new Error(data.error);
         }
