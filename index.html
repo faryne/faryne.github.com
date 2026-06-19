@@ -269,27 +269,26 @@
 		</dl> -->
 		
 
-		<!--<h4><a href="http://ha2.tw/energy">台電用電量資料統計</a></h4>
+		<h4><a href="https://beta.faryne.dev/data/taipower/neighbor">台電敦親睦鄰捐助統計</a></h4>
 		<dl>
 			<dt>網頁爬蟲</dt>
-			<dd>使用 phpQuery 將指定網頁上的內容解析出來後塞回資料庫</dd>
-			<dd>並將這些爬好的資料直接呈現或使用 <a href="https://developers.google.com/chart/interactive/docs/reference">Google Visualization API</a> 呈現。</dd>
-		</dl>-->
+			<dd>使用 Golang 以及自製的爬蟲整理出台電敦親睦鄰捐助統計</dd>
+			<dd>資料會在爬完後即時塞入 DB 以及 Elasticsearch 後作搜尋處理</dd>
+		</dl
 
-		<!--<h4><a href="https://ha2.tw/ntpcfd">新北市消防局報案紀錄查詢</a></h4>
+		<h4><a href="https://beta.faryne.dev/data/fire/realtime/">即時消防出勤記錄</a></h4>
 		<dl>
 			<dt>網頁爬蟲</dt>
-			<dd>使用 Codeigniter 與 phpQuery 針對新北市消防局的報案查詢網站進行爬取</dd>
-			<dd>並將這些資料做初步的地標定位後以網站或 API 形式提供查詢</dd>
-		</dl>-->
+			<dd>使用 Golang 以及自製的爬蟲 service 去爬取六都的消防出勤記錄（目前台南與高雄部分因為機器區域限制而無法讀取）</dd>
+		</dl>
 
-		<h4><a href="https://beta.faryne.dev/nekomaid">難以名狀的抓圖器</a></h4>
+		<h4><a href="https://nekomaid.web.app">難以名狀的抓圖器</a></h4>
 		<dl>
 			<dt>網頁爬蟲</dt>
 			<dd>使用者拋送網站代碼及作品ID，爬蟲會及時解析圖片位址和標題等資訊，並根據擷取到的圖片位址抓取圖片檔案並丟至 <a href="https://aws.amazon.com/tw/s3/">AWS S3</a> 儲放</dd>
 			<dd>前端網站的出圖由 <a href="https://aws.amazon.com/tw/cloudfront/">AWS CloudFront</a> 串聯 AWS S3 負責，提升全球各地的存取速度。</dd>
 			<dd>並且使用 Elasticsearch 處理站內搜尋功能</dd>
-			<dd><a href="https://beta.faryne.dev/nekomaid">新版網站</a>使用 ReactJS 搭配 Codex 撰寫</dd>
+			<dd><a href="https://nekomaid.web.app">新版網站</a>使用 ReactJS 搭配 Codex 撰寫</dd>
 		</dl>
 
 		<h4>個人 Github Repositories 及其他相關資料</h4>

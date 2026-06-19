@@ -26,7 +26,7 @@
     finishText: "✅ 抓取完成",
     hintText: "支援 Pixiv, Nico, Tinami",
     copyrightUrl: "https://nekomaid.web.app/",
-    apiUrl: "https://neko.maid.tw/api/retrieve.json"
+    apiUrl: "https://neko.maid.tw/retrieve.json"
   };
 
   // 注入樣式
