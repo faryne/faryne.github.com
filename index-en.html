@@ -1,207 +1,389 @@
 <!doctype html>
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>About me</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <script type="text/javascript" src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-  </head>
-  <style type="text/css">
-  body{text-align:center;}
-  h4{margin-bottom:3px;}
-  dd:before{content:"※ ";}
-  #github-icon{color:#000;font-size:23px;display:block}
-  </style>
-  <body>
-  	<div id="wrapper" style="width:800px;margin: 0 auto; text-align:left;">
-  		<table class="table tabler-bordered" style="font-size:20px;">
-			<tbody>
-				<tr>
-					<td rowspan="3" width="200"><img src="//www.gravatar.com/avatar/hkj6ea548a4a4679eb99055d00a80a593c30?s=160"></td>
-					<td>Faryne Hsieh<br />謝育典</td>
-				</tr>
-				<tr>
-					<td>
-						Homepage: <a href="https://lab.faryne.dev/">Lab</a> / <a href="https://blog.faryne.dev/">Blog</a><br>
-						<img src="mail.png">
-						<a href="https://github.com/faryne" id="github-icon"><i class="fab fa-github-square"></i></a>
-					</td>
-				</tr>
-			</tbody>
-		</table>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Faryne Hsieh｜Backend &amp; SRE Engineer</title>
+  <meta name="description" content="Résumé of Faryne Hsieh (謝育典): backend development and system operations with Golang and Python on AWS / GCP.">
+  <meta name="theme-color" content="#0e1014">
+  <link rel="alternate" hreflang="zh-Hant" href="index.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+TC:wght@400;500;700;900&display=swap">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container">
+      <a class="brand" href="#top">faryne<span class="accent">.dev</span></a>
+      <nav class="nav" aria-label="Main">
+        <a href="#about">about</a>
+        <a href="#skills">skills</a>
+        <a href="#work">work</a>
+        <a href="#projects">projects</a>
+        <a class="lang" href="index.html" hreflang="zh-Hant" lang="zh-Hant">中文</a>
+      </nav>
+    </div>
+  </header>
 
-		<!--<div class="row">
-			<h3>Intro</h3>
-			<p>我是謝育典，主要專長是網站開發，使用技術為 PHP 與 MySQL，經驗大約十年。工作上前後端皆有碰觸，但主要以後端為主。</p>
-			<p>除了 PHP 與 MySQL 的組合外，Python、Perl 及 Oracle DB 還算略通。</p>
-			<p>在開發語言與資料庫外，我也有一點簡單的系統管理經驗。目前在 AWS EC2、<a href="https://azure.microsoft.com/">Microsoft Azure</a> 與 <a href="https://www.digitalocean.com/">DigitalOcean</a> 有幾台實驗用的 VPS</p>
-		</div>-->
-		
-		
-		<div class="row">
-			<div class="col-md-6">
-				<h3>Education History</h3>
-				<dl>
-					<dt>Management & Information, National Open University</dt>
-					<dd>2010/09~2024/06</dd>
-				</dl>
-				<dl>
-					<dt>History, Fu Jen Catholic University</dt>
-					<dd>2001/09~2003/06</dd>
-				</dl>
-			</div>
-			<div class="col-md-6">
-				<h3>Skills</h3>
-				<dl>
-					<dt>Programming Languages</dt>
-					<dd>Familiar：PHP, Golang, JavaScript, HTML, CSS</dd>
-					<dd>Studied: Perl, Python</dd>
-				</dl>
-				<dl>
-					<dt>Databases</dt>
-					<dd>MySQL / Oracle</dd>
-				</dl>
-				<dl>
-					<dt>Miscellaneous</dt>
-					<dd>Operating System: Ubuntu</dd>
-					<dd>Web Frameworks: Codeigniter, Laravel, Gin, Fiber, jQuery, Vue.js</dd>
-					<dd>CI / CD Environments: TravisCI / Github Actions</dd>
-					<dd>
-						Familiar: 
-						<acronym title="Amazon Web Service">AWS</acronym> / <acronym title="Google Cloud Platform">GCP</acronym> / <acronym title="Elasticsearch Logstash Kibana">ELK</acronym></dd>
-				</dl>
-			</div>
-		</div>
+  <main id="top">
+    <!-- hero -->
+    <section class="container hero">
+      <div class="hero-text">
+        <div class="prompt">~/faryne <span class="accent">$</span> whoami</div>
+        <h1>Faryne Hsieh<span class="sub" lang="zh-Hant">謝育典</span></h1>
+        <p class="role">Backend &amp; SRE Engineer<span class="cursor" aria-hidden="true"></span></p>
+        <p class="lead">Backend development and system operations. Golang first, Python on the side, with hands-on experience in AWS / GCP architecture, CI/CD, monitoring and alerting.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://faryne.dev/">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"></path></svg>
+            Lab
+          </a>
+          <a class="btn" href="https://github.com/faryne">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            GitHub
+          </a>
+          <a class="btn" href="#contact">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>
+            Email
+          </a>
+        </div>
+      </div>
 
-		<div class="row">
-			<h3>證照</h3>
-			<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="4356d6ac-42bb-48b6-8d90-75e6978a8d77" data-share-badge-host="https://www.credly.com"></div>
-			<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="076b834c-57e4-4e76-a1ca-e2e98b4117ee" data-share-badge-host="https://www.credly.com"></div>
-			<script type="text/javascript" async src="https://cdn.credly.com/assets/utilities/embed.js"></script>
-		</div>
+      <div class="terminal" aria-label="Profile summary">
+        <div class="terminal-bar" aria-hidden="true"><span></span><span></span><span></span><span class="title">profile.yaml</span></div>
+        <div class="terminal-id">
+          <img src="https://www.gravatar.com/avatar/6ea548a4a4679eb99055d00a80a593c3?s=168" width="84" height="84" alt="Avatar of Faryne Hsieh">
+          <div class="meta"><strong>Faryne Hsieh</strong>Backend · SRE</div>
+        </div>
+<pre><span class="c"># since 2006</span>
+<span class="k">role</span>: backend, sre, devops
+<span class="k">lang</span>: [go, python, php, ts]
+<span class="k">cloud</span>: [aws, gcp]
+<span class="k">infra</span>: [docker, k8s, cdk]
+<span class="k">data</span>: [mysql, redis, elasticsearch]
+<span class="k">focus</span>: <span class="v">[api, cloud, monitoring]</span></pre>
+      </div>
+    </section>
 
-		<h3>Employment History</h3>
-		<h4>Mending Technology Co., Ltd.</h4>
-		<dl>
-			<dt>Golang Developer（2022/10~）</dt>
-			<dd>
-				Maintain & design backend admin consoles, includes: API / cron in backend and frontend pages
-				<ul>
-					<li>Using Golang / Gin Framework to design backend admin consoles</li>
-					<li>Communicate main exchange service with their own API</li>
-					<li>Design frontend pages of admin consoles</li>
-				</ul>
-			</dd>
-		</dl>
-		<h4><a href="https://www.indochat.co.id" target="_blank">QTComm Inc.</a></h4>
-		<dl>
-			<dt>Senior Backend Engineer（2019/10~2021/11）</dt>
-			<dd>
-				Design & maintain AWS Cloud Infrastures using Cloudformation, inclusive of ECS Fargate, RDS, Cloudwatch, e.t.c. 
-				<ul>
-					<li>Using AWS Cloudformation and AWS CDK </li>
-					<li>API Service：Deploy API on ECS Fargate, setup cache service with Cloudfront, and configure autoscaling measures (by schedue / by CPU or memory usage).</li>
-					<li>Deployment of MQTT Cluster：Deployment MQTT Cluster on EC2, and use Global Accelerator to speed up connection speed.</li>
-					<li>Deployment of Static Site：Using S3 for storing static files and setup cloudfront for CDN Service.</li>
-					<li>Maintain configuration of Elasticache(Redis) and RDS Aurora(MySQL).</li>
-				</ul>
-			</dd>
-			<dd>
-				Design Crontab System using EventBridge
-				<ul>
-					<li>Desgin crontab runtime and deployment measures with golang</li>
-					<li>Setup job schedule rules on EventBridge.</li>
-				</ul>
-			</dd>
-			<dd>
-				Setup Grafana Monitor Dashboard and 
-				<ul>
-					<li>Using cloudwatch as datasource, show logs(API Service) and metrics on Grafana</li>
-					<li>Setup Alerts with Cloudwatch Metrics. When the metrics is over threshold, cloudwatch will trigger SNS and send alert to Slack</li>
-				</ul>
-			</dd>
-			<dd>Maintain CI/CD configuration based on TravisCI / Github Actions.</dd>
-		</dl>
-		<h4><a href="https://presslogic.com">Presslogic Ltd., Taiwan Branch</a></h4>
-		<dl>
-			<dt>Web / Backend Engineer（2018/07~2019/08）</dt>
-			<dd>
-				Design Infrasture with GCP, inclusive GCE, Cloud SQL, e.t.c.
-				<ul>
-					<li>Primarily using GCE, Cloud SQL (MySQL) and Memorystore (Redis)</li>
-					<li>Create and maintain shellscripts for booting script</li>
-				</ul>
-			</dd>
-			<dd>
-				Setup data syncing service between MySQL and Elasticsearch with Logstash
-				<ul>
-					<li>Create and maintain the configuration of Logstash</li>
-					<li>Sync data from MySQL to Elasticsearch</li>
-				</ul>
-			</dd>
-			<dd>Maintainment of CI / CD Service with Gitlab</dd>
-		</dl>
-		<h4>Fashionguide Inc.（<a href="http://www.fashionguide.com.tw/">FashionGuide</a>）</h4>
-		<dl>
-			<dt>Senior Engineer（2017/10~2018/07）</dt>
-			<dd>Management for AWS services, inclusive of EC2, RDS, e.t.c.</dd>
-			<dd>Maintainment of CI / CD service</dd>
-			<dd>Assist for service development, primarily using PHP7 / MySQL / Laravel 5.x</dd>
-		</dl>
-		<h4><a href="http://omusic.friday.tw/">Omusic Co., Ltd.</a></h4>
-		<dl>
-			<dt>Senior Engineer（2016/06~2017/09）</dt>
-			<dd>Build all new system foundation, using PHP, MySQL, Redis, RabbitMQ, and e.t.c.</dd>
-			<dd>Build log analysis with ELK and RabbitMQ</dd>
-		</dl>
-		<h4><a href="http://www.asap.com.tw/">Uitox Inc.</a></h4>
-		<dl>
-			<dt>ERP Engineer (2013/05~2015/07)</dt>
-			<dd>Generate daily business report through tools with every different customized sql.</dd>
-			<dd>Maintainment & Development functions for supplier-relation management.</dd>
-		</dl>
-		<h4><a href="http://yahoo-emarketing.tumblr.com/">Yahoo Digital Marketing Inc.</a></h4>
-		<dl>
-			<dt>Engineer (Contract, 2012/05~2013/02)</dt>
-			<dd>Generate sales report with tools written in PHP / MySQL, and send reports to retailer partners.</dd>
-			<dd>Development for campaign pages and related tools</dd>
-		</dl>
-		<h4><a href="https://www.ruten.com.tw/">PChome eBay Co., Ltd.</a></h4>
-		<dl>
-			<dt>Engineer (2011/05~2012/04)</dt>
-			<dd>Development & Maintainment functions of the site, using PHP / Oracle.</dd>
-			<dd>Daily Process for logistics data exchanging with partners.</dd>
-		</dl>
-		<h4><a href="https://www.rakuya.com.tw/">Rakuya Inc.</a></h4>
-		<dl>
-			<dt>Engineer (2008/08~2011/04)</dt>
-			<dd>Development & Maintainment functions of the website, using PHP / MySQL (includsive frontend / backend).</dd>
-			<dd>Daily Process for data exchanging with partners (Exchanging methods may be FTP / Soap / HTTP Post).</dd>
-		</dl>
-		<h4><a href="https://home.allproducts.com/EN/index/">All Products Online Corporation</a></h4>
-		<dl>
-			<dt>Engineer (2007/03~2008/06)</dt>
-			<dd>Development & Maintainment internal-use tools with PHP / MySQL</dd>
-		</dl>
+    <!-- about -->
+    <section id="about" class="container section about">
+      <div class="section-head">
+        <span class="num">01 //</span>
+        <h2>About</h2>
+      </div>
+      <div class="about-body">
+        <p>I'm Faryne Hsieh, specializing in web development and system administration. I have worked on both frontend and backend, with most of my time on the backend.</p>
+        <p>I started out mainly with PHP and have since moved to Golang as my primary language, with Python on the side.</p>
+        <p>In recent years my work has grown from pure backend development into SRE / DevOps, with solid hands-on experience on AWS and GCP.</p>
+      </div>
+    </section>
 
-  	</div>
-  	<script type="text/javascript">
-  	$(function(){
-  		$('a').on('click', function(e){
-  			e.preventDefault();
-  			window.open($(this).attr('href'), '_ex_detail');
-  		});
-  	});
-  	</script>
-  	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-96598-10"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
+    <!-- skills -->
+    <section id="skills" class="container section">
+      <div class="section-head">
+        <span class="num">02 //</span>
+        <h2>Skills</h2>
+      </div>
+      <div class="skill-grid">
+        <div class="card skill-card">
+          <h3>// Languages</h3>
+          <ul class="chips"><li>Golang</li><li>Python</li><li>PHP</li><li>TypeScript</li><li>VanillaJS</li><li>HTML / CSS</li><li>Shell Script</li></ul>
+        </div>
+        <div class="card skill-card">
+          <h3>// Frameworks &amp; Libraries</h3>
+          <ul class="chips"><li>Gin</li><li>Fiber</li><li>Laravel</li><li>CodeIgniter</li><li>Vue.js</li><li>React</li><li>jQuery</li></ul>
+        </div>
+        <div class="card skill-card">
+          <h3>// Cloud &amp; Infrastructure</h3>
+          <ul class="chips"><li>AWS</li><li>GCP</li><li>Docker</li><li>Kubernetes</li><li>Linux (Ubuntu)</li></ul>
+        </div>
+        <div class="card skill-card">
+          <h3>// Databases &amp; Caching</h3>
+          <ul class="chips"><li>MySQL</li><li>Oracle</li><li>Redis</li><li>CloudFront</li></ul>
+        </div>
+        <div class="card skill-card">
+          <h3>// Messaging &amp; Search</h3>
+          <ul class="chips"><li>RabbitMQ</li><li><abbr title="Elasticsearch Logstash Kibana">ELK</abbr></li></ul>
+        </div>
+        <div class="card skill-card">
+          <h3>// CI/CD &amp; Monitoring</h3>
+          <ul class="chips"><li>GitHub Actions</li><li>TravisCI</li><li>GitLab CI</li><li>Grafana</li><li>CloudWatch</li></ul>
+        </div>
+      </div>
+    </section>
 
-	  gtag('config', 'UA-96598-10');
-	</script>
-  </body>
+    <!-- work -->
+    <section id="work" class="container section">
+      <div class="section-head">
+        <span class="num">03 //</span>
+        <h2>Experience</h2>
+      </div>
+
+      <ol class="timeline">
+        <li class="job">
+          <div class="job-period">2022/10 – 2025/06</div>
+          <div class="job-body">
+            <h3 class="job-title">Golang Developer <span class="company">@ Mending Technology Co., Ltd.</span></h3>
+            <ul class="duties">
+              <li>Designed and maintained admin consoles and services for a cryptocurrency exchange, including backend APIs / cron jobs and frontend pages.
+                <ul>
+                  <li>Built the admin consoles with Golang and the Gin framework</li>
+                  <li>Integrated the trading APIs of major exchanges to handle hedging trades</li>
+                  <li>Built the admin frontend with Vue 3 / Ant Design Vue</li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="tags"><li>Go</li><li>Gin</li><li>Vue 3</li></ul>
+          </div>
+        </li>
+
+        <li class="job">
+          <div class="job-period">2019/10 – 2021/11</div>
+          <div class="job-body">
+            <h3 class="job-title">Senior Backend Engineer <span class="company">@ <a href="https://www.indochat.co.id">QTComm Inc.</a></span></h3>
+            <ul class="duties">
+              <li>Designed and maintained the AWS cloud infrastructure (ECS Fargate, RDS, CloudWatch, etc.) with CloudFormation and AWS CDK.
+                <ul>
+                  <li>API service: deployed APIs on ECS Fargate behind a load balancer with CloudFront caching, and configured autoscaling by schedule and by CPU / memory usage.</li>
+                  <li>MQTT cluster: built and deployed the MQTT cluster on EC2 with monitoring, using Global Accelerator to speed up connections.</li>
+                  <li>Static sites: S3 for static files with CloudFront as the CDN.</li>
+                  <li>Maintained the configuration of ElastiCache (Redis) and RDS Aurora (MySQL).</li>
+                </ul>
+              </li>
+              <li>Designed a job scheduling system with EventBridge and ECS
+                <ul>
+                  <li>Designed the job runtime and deployment workflow in Golang</li>
+                  <li>Set up job schedule rules on EventBridge</li>
+                </ul>
+              </li>
+              <li>Set up Grafana monitoring dashboards and alerting
+                <ul>
+                  <li>Used CloudWatch as the data source to show API service logs and metrics in Grafana</li>
+                  <li>Set up alerts on CloudWatch metrics; when a metric crosses its threshold, CloudWatch triggers SNS and sends the alert to Slack</li>
+                </ul>
+              </li>
+              <li>Maintained CI/CD configuration on TravisCI / GitHub Actions</li>
+            </ul>
+            <ul class="tags"><li>AWS</li><li>CDK</li><li>ECS</li><li>EventBridge</li><li>Grafana</li></ul>
+          </div>
+        </li>
+
+        <li class="job">
+          <div class="job-period">2018/07 – 2019/08</div>
+          <div class="job-body">
+            <h3 class="job-title">Web / Backend Engineer <span class="company">@ <a href="https://presslogic.com">PressLogic Ltd., Taiwan Branch</a></span></h3>
+            <ul class="duties">
+              <li>Designed the infrastructure on GCP, including GCE, Cloud SQL, etc.
+                <ul>
+                  <li>Primarily used GCE, Cloud SQL (MySQL) and Memorystore (Redis)</li>
+                  <li>Created and maintained shell scripts for instance startup</li>
+                </ul>
+              </li>
+              <li>Set up data syncing between MySQL and Elasticsearch with Logstash
+                <ul>
+                  <li>Created and maintained the Logstash configuration</li>
+                  <li>Synced data from MySQL to Elasticsearch</li>
+                </ul>
+              </li>
+              <li>Maintained the CI/CD service on GitLab</li>
+            </ul>
+            <ul class="tags"><li>GCP</li><li>Elasticsearch</li><li>Logstash</li><li>PHP</li></ul>
+          </div>
+        </li>
+
+        <li class="job">
+          <div class="job-period">2017/10 – 2018/07</div>
+          <div class="job-body">
+            <h3 class="job-title">Senior Engineer <span class="company">@ FashionGuide Inc. (<a href="https://www.fashionguide.com.tw/">FashionGuide</a>)</span></h3>
+            <ul class="duties">
+              <li>Managed AWS services, including EC2, RDS, etc.</li>
+              <li>Maintained the CI/CD service</li>
+              <li>Assisted with service development, primarily using PHP 7 / MySQL / Laravel 5.x</li>
+            </ul>
+            <ul class="tags"><li>AWS</li><li>PHP</li><li>Laravel</li></ul>
+          </div>
+        </li>
+
+        <li class="job">
+          <div class="job-period">2016/06 – 2017/09</div>
+          <div class="job-body">
+            <h3 class="job-title">Senior Engineer <span class="company">@ <a href="https://omusic.friday.tw/">Omusic Co., Ltd.</a></span></h3>
+            <ul class="duties">
+              <li>Built a new system foundation using PHP, MySQL, Redis, RabbitMQ, etc.</li>
+              <li>Built log analysis with ELK and RabbitMQ</li>
+            </ul>
+            <ul class="tags"><li>PHP</li><li>RabbitMQ</li><li>ELK</li></ul>
+          </div>
+        </li>
+      </ol>
+
+      <details class="older">
+        <summary><span class="show">+ Show 5 earlier roles (2007 – 2015)</span><span class="hide">− Hide earlier roles</span></summary>
+        <ol class="timeline">
+          <li class="job">
+            <div class="job-period">2013/05 – 2015/07</div>
+            <div class="job-body">
+              <h3 class="job-title">ERP Engineer <span class="company">@ Uitox Inc. (ASAP)</span></h3>
+              <ul class="duties">
+                <li>Generated daily business reports through tools built on customized SQL queries</li>
+                <li>Maintained and developed the supplier relationship management system</li>
+              </ul>
+              <ul class="tags"><li>PHP</li><li>Oracle</li></ul>
+            </div>
+          </li>
+          <li class="job">
+            <div class="job-period">2012/05 – 2013/02</div>
+            <div class="job-body">
+              <h3 class="job-title">Engineer (Contract) <span class="company">@ <a href="https://yahoo-emarketing.tumblr.com/">Yahoo Digital Marketing Inc.</a></span></h3>
+              <ul class="duties">
+                <li>Generated sales reports with tools written in PHP / MySQL and sent them to retail partners</li>
+                <li>Developed campaign pages and related tools</li>
+              </ul>
+              <ul class="tags"><li>PHP</li><li>MySQL</li></ul>
+            </div>
+          </li>
+          <li class="job">
+            <div class="job-period">2011/05 – 2012/04</div>
+            <div class="job-body">
+              <h3 class="job-title">Engineer <span class="company">@ <a href="https://www.ruten.com.tw/">PChome eBay Co., Ltd.</a></span></h3>
+              <ul class="duties">
+                <li>Developed and maintained site features using PHP / Oracle</li>
+                <li>Handled daily logistics data exchange with partners</li>
+              </ul>
+              <ul class="tags"><li>PHP</li><li>Oracle</li></ul>
+            </div>
+          </li>
+          <li class="job">
+            <div class="job-period">2008/08 – 2011/04</div>
+            <div class="job-body">
+              <h3 class="job-title">Engineer <span class="company">@ <a href="https://www.rakuya.com.tw/">Rakuya Inc.</a></span></h3>
+              <ul class="duties">
+                <li>Developed and maintained website features using PHP / MySQL (both frontend and backend)</li>
+                <li>Handled daily data exchange with partners via FTP / SOAP / HTTP POST</li>
+              </ul>
+              <ul class="tags"><li>PHP</li><li>MySQL</li></ul>
+            </div>
+          </li>
+          <li class="job">
+            <div class="job-period">2007/03 – 2008/06</div>
+            <div class="job-body">
+              <h3 class="job-title">Engineer <span class="company">@ <a href="https://home.allproducts.com/EN/index/">All Products Online Corporation</a></span></h3>
+              <ul class="duties">
+                <li>Developed and maintained internal tools with PHP / MySQL</li>
+              </ul>
+              <ul class="tags"><li>PHP</li><li>MySQL</li></ul>
+            </div>
+          </li>
+        </ol>
+      </details>
+    </section>
+
+    <!-- projects -->
+    <section id="projects" class="container section">
+      <div class="section-head">
+        <span class="num">04 //</span>
+        <h2>Side Projects</h2>
+      </div>
+      <div class="project-grid">
+        <a class="card project" href="https://faryne.dev/tools/thread/capture">
+          <div class="project-top"><span>tool</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"></path></svg></div>
+          <h3>Threads Capture</h3>
+          <p>Paste a Threads post URL to get a screenshot with a QR code linking back to the original thread, ready to download. Screenshots are taken with ChromeDP and headless Chrome; post content comes from the oEmbed API.</p>
+          <ul class="stack"><li>Go</li><li>ChromeDP</li><li>Headless Chrome</li><li>oEmbed</li></ul>
+        </a>
+        <a class="card project" href="https://neko.maid.tw">
+          <div class="project-top"><span>crawler</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"></path></svg></div>
+          <h3>The Indescribable Image Grabber</h3>
+          <p>Given a site code and work ID, the crawler resolves image URLs and titles on the fly, fetches the images into AWS S3 and serves them through CloudFront for fast access worldwide. Site search runs on Elasticsearch; the new frontend is written in React with Codex.</p>
+          <ul class="stack"><li>AWS S3</li><li>CloudFront</li><li>Elasticsearch</li><li>React</li></ul>
+        </a>
+        <a class="card project" href="https://faryne.dev/av/video">
+          <div class="project-top"><span>crawler</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"></path></svg></div>
+          <h3>DMM Video Search</h3>
+          <p>A Golang crawler collects video and actress data from Fanza (formerly DMM). Logstash periodically syncs the data from MySQL to Elasticsearch, and the frontend is built with React.</p>
+          <ul class="stack"><li>Go</li><li>MySQL</li><li>Logstash</li><li>Elasticsearch</li><li>React</li></ul>
+        </a>
+        <a class="card project" href="https://faryne.dev/data/rates">
+          <div class="project-top"><span>crawler</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"></path></svg></div>
+          <h3>Bank Exchange Rates</h3>
+          <p>A PHP / Laravel backend crawls exchange rates from major Taiwanese banks into a database; a React + Axios frontend reads them through an API. Hosted on Firebase Hosting.</p>
+          <ul class="stack"><li>PHP</li><li>Laravel</li><li>React</li><li>Firebase</li></ul>
+        </a>
+        <a class="card project" href="https://faryne.dev/data/tw-stats">
+          <div class="project-top"><span>crawler</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"></path></svg></div>
+          <h3>Taiwan County Statistics</h3>
+          <p>Golang fetches the XML published by the DGBAS (Taiwan's statistics bureau) and stores it as JSON on GitHub (faryne/tw-stats); a React + Axios frontend reads the files from GitHub in real time.</p>
+          <ul class="stack"><li>Go</li><li>GitHub</li><li>React</li></ul>
+        </a>
+        <a class="card project" href="https://faryne.dev/data/taipower/neighbor">
+          <div class="project-top"><span>crawler</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"></path></svg></div>
+          <h3>Taipower Community Donations</h3>
+          <p>A custom Golang crawler compiles Taipower's community donation records and writes them to a database and Elasticsearch for search.</p>
+          <ul class="stack"><li>Go</li><li>Elasticsearch</li></ul>
+        </a>
+        <a class="card project" href="https://faryne.dev/data/fire/realtime/">
+          <div class="project-top"><span>crawler</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"></path></svg></div>
+          <h3>Real-time Fire Dispatches</h3>
+          <p>A custom Golang crawler service collects fire department dispatch records from Taiwan's six special municipalities (Tainan and Kaohsiung are currently unreachable due to region restrictions on the server).</p>
+          <ul class="stack"><li>Go</li><li>Crawler</li></ul>
+        </a>
+        <a class="card project" href="https://github.com/faryne/integration">
+          <div class="project-top"><span>github</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"></path></svg></div>
+          <h3>Full-stack Integration</h3>
+          <p>A backend built with Golang + Fiber and a frontend built with React.</p>
+          <ul class="stack"><li>Go</li><li>Fiber</li><li>React</li></ul>
+        </a>
+      </div>
+    </section>
+
+    <!-- education + certs -->
+    <section class="container section split">
+      <div>
+        <div class="section-head">
+          <span class="num">05 //</span>
+          <h2>Education</h2>
+        </div>
+        <ul class="edu">
+          <li><span>Management &amp; Information, National Open University <span class="status">B.A.</span></span><span class="years">2010/09 – 2024/06</span></li>
+          <li><span>History, Fu Jen Catholic University <span class="status">not completed</span></span><span class="years">2001/09 – 2003/06</span></li>
+        </ul>
+      </div>
+      <div>
+        <div class="section-head">
+          <span class="num">06 //</span>
+          <h2>Certifications</h2>
+        </div>
+        <div class="badges">
+          <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="4356d6ac-42bb-48b6-8d90-75e6978a8d77" data-share-badge-host="https://www.credly.com"></div>
+          <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="076b834c-57e4-4e76-a1ca-e2e98b4117ee" data-share-badge-host="https://www.credly.com"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="footer">
+    <div class="container">
+      <div class="footer-text">
+        <span class="cmd">$ echo "let's talk"</span>
+        <strong>Have an opportunity in mind? Feel free to reach out.</strong>
+      </div>
+      <div class="actions">
+        <span class="mail-chip"><img src="mail.png" width="140" height="21" alt="Email address (image)"></span>
+        <a class="btn" href="https://docs.google.com/presentation/d/1fVsqd0e6CquLgsFEeXGnIs--wmhpCMKd/edit?usp=sharing&amp;ouid=104802345237603796061&amp;rtpof=true&amp;sd=true">Work highlights (slides)</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.credly.com/assets/utilities/embed.js" async></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96598-10"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-96598-10');
+  </script>
+  <script src="assets/site.js"></script>
+</body>
 </html>

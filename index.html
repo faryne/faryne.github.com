@@ -1,324 +1,415 @@
 <!doctype html>
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>關於我</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <script type="text/javascript" src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-  </head>
-  <style type="text/css">
-  body{text-align:center;}
-  h4{margin-bottom:3px;}
-  dd:before{content:"※ ";}
-  #github-icon{color:#000;font-size:23px;display:block}
-  p.detail {
-	text-indent: 10px;
-  }
-  p.detail:before {
-	content: "- ";
-  }
-  </style>
-  <body>
-  	<div id="wrapper" style="width:800px;margin: 0 auto; text-align:left;">
-  		<table class="table tabler-bordered" style="font-size:20px;">
-			<tbody>
-				<tr>
-					<td rowspan="3" width="200"><img src="//www.gravatar.com/avatar/6ea548a4a4679eb99055d00a80a593c3?s=160"></td>
-					<td>謝育典(Faryne Hsieh)</td>
-				</tr>
-				<tr>
-					<td>
-						個人網站：<a href="https://faryne.dev/">Lab</a><br />
-						<img src="mail.png" />
-						<a href="https://github.com/faryne" id="github-icon"><i class="fab fa-github-square"></i></a>
-					</td>
-				</tr>
-			</tbody>
-		</table>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>謝育典 Faryne Hsieh｜Backend &amp; SRE Engineer</title>
+  <meta name="description" content="謝育典（Faryne Hsieh）的個人履歷：網站後端開發與系統維運，主力 Golang、Python，熟悉 AWS / GCP。">
+  <meta name="theme-color" content="#0e1014">
+  <link rel="alternate" hreflang="en" href="index-en.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+TC:wght@400;500;700;900&display=swap">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container">
+      <a class="brand" href="#top">faryne<span class="accent">.dev</span></a>
+      <nav class="nav" aria-label="主選單">
+        <a href="#about">about</a>
+        <a href="#skills">skills</a>
+        <a href="#work">work</a>
+        <a href="#projects">projects</a>
+        <a class="lang" href="index-en.html" hreflang="en" lang="en">EN</a>
+      </nav>
+    </div>
+  </header>
 
-		<div class="row">
-			<h3>個人介紹</h3>
-			<p>我是謝育典，主要專長是網站開發以及系統管理。工作上前後端皆有碰觸，但多以後端為主。</p>
-			<p>早期主要使用 PHP，近期轉向為 Golang 為主以及 Python 為輔。</p>
-			<p>近年工作領域從單純 Backend 開發外還跨足至 SRE / DeveOps 領域。在 AWS / GCP 雲服務平台有一定的操作經驗。</p>
-		</div>
-		
-		
-		<div class="row">
-			<div class="col-md-6">
-				<h3>學歷</h3>
-				<dl>
-					<dt>國立空中大學管理資訊學系畢業</dt>
-					<dd>2010/09~2024/06</dd>
-				</dl>
-				<dl>
-					<dt>天主教輔仁大學歷史學系肄業</dt>
-					<dd>2001/09~2003/06</dd>
-				</dl>
-				<dl>
-					<dt>臺北市立陽明高中畢業</dt>
-					<dd>1998/09~2001/06</dd>
-				</dl>	
-			</div>
-			<div class="col-md-6">
-				<h3>技能</h3>
-				<dl>
-					<dt>程式語言</dt>
-					<dd>TypeScript、VanillaJS、HTML、CSS</dd>
-					<dd>PHP、Python、Golang</dd>
-					<dd>ShellScript</dd>
-				</dl>
-				<dl>
-					<dt>資料庫</dt>
-					<dd>MySQL 及 Oracle</dd>
-				</dl>
-				<dl>
-					<dt>雜項</dt>
-					<dd>作業系統：Linux(Ubuntu)</dd>
-					<dd>網站開發框架及常用函式庫：Codeigniter、Laravel、Gin、Fiber、jQuery、Vue.js、ReactJS</dd>
-					<dd>訊息佇列：RabbitMQ</dd>
-					<dd>快取：Redis、Cloudfront</dd>
-					<dd>CI / CD 環境： TravisCI / Github Actions</dd>
-					<dd>雲端服務：<acronym title="Amazon Web Service">AWS</acronym> / <acronym title="Google Cloud Platform">GCP</acronym></dd>
-					<dd>其他：<acronym title="Elasticsearch Logstash Kibana">ELK</acronym>、Docker、<acronym title="Kubernetes">K8s</acronym></acronym></dd>
-				</dl>
-			</div>
-		</div>
+  <main id="top">
+    <!-- hero -->
+    <section class="container hero">
+      <div class="hero-text">
+        <div class="prompt">~/faryne <span class="accent">$</span> whoami</div>
+        <h1>謝育典<span class="sub" lang="en">Faryne Hsieh</span></h1>
+        <p class="role" lang="en">Backend &amp; SRE Engineer<span class="cursor" aria-hidden="true"></span></p>
+        <p class="lead">專注網站後端開發與系統維運。主力 Golang、輔以 Python，熟悉 AWS / GCP 雲端架構、CI/CD 與監控告警。</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://faryne.dev/">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"></path></svg>
+            個人網站 Lab
+          </a>
+          <a class="btn" href="https://github.com/faryne">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            GitHub
+          </a>
+          <a class="btn" href="#contact">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>
+            Email
+          </a>
+        </div>
+      </div>
 
-		<div class="row">
-			<h3>證照</h3>
-			<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="4356d6ac-42bb-48b6-8d90-75e6978a8d77" data-share-badge-host="https://www.credly.com"></div>
-			<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="076b834c-57e4-4e76-a1ca-e2e98b4117ee" data-share-badge-host="https://www.credly.com"></div>
-			<script type="text/javascript" async src="https://cdn.credly.com/assets/utilities/embed.js"></script>
-		</div>
-		
+      <div class="terminal" aria-label="個人資料摘要">
+        <div class="terminal-bar" aria-hidden="true"><span></span><span></span><span></span><span class="title">profile.yaml</span></div>
+        <div class="terminal-id">
+          <img src="https://www.gravatar.com/avatar/6ea548a4a4679eb99055d00a80a593c3?s=168" width="84" height="84" alt="謝育典的頭像">
+          <div class="meta"><strong>謝育典</strong>Backend · SRE</div>
+        </div>
+<pre lang="en"><span class="c"># since 2006</span>
+<span class="k">role</span>: backend, sre, devops
+<span class="k">lang</span>: [go, python, php, ts]
+<span class="k">cloud</span>: [aws, gcp]
+<span class="k">infra</span>: [docker, k8s, cdk]
+<span class="k">data</span>: [mysql, redis, elasticsearch]
+<span class="k">focus</span>: <span class="v">[api, cloud, monitoring]</span></pre>
+      </div>
+    </section>
 
-		<h3>工作經歷</h3>
-		<h4>眾鼎科技有限公司</h4>
-		<dl>
-			<dt>Golang 開發工程師（2022/10~2025/06）</dt>
-			<dd>
-				設計並維護虛擬貨幣交易所之後關台系統或服務，包含後端 API / cron 以及前端頁面的設計。
-				<ul>
-					<li>使用 Golang / Gin Framework 設計開發後台系統</li>
-					<li>串接主要虛擬幣交易所交易 API 以便處理對沖交易</li>
-					<li>使用 Vue 3 / Ant-Design-Vue 處理後台系統的前端部分</li>
-				</ul>
-			</dd>
-		</dl>
-		<h4><a href="https://www.indochat.co.id" target="_blank">酷堤康科技股份有限公司</a></h4>
-		<dl>
-			<dt>Senior Backend Engineer（2019/10~2021/11）</dt>
-			<dd>
-				負責設計建立維護公司所使用的雲端服務架構（主要使用 AWS 服務，使用 Cloudformation / CDK(Golang) 設計維護）
-				<ul>
-					<li>API 服務： 主要使用 ECS Fargate 搭配 Load Balancer 分配流量給 ECS 的 Task，並使用 Cloudfront 作 cache。並搭配 AutoScaling 機制，在特定時間帶或是 ECS Service 的 CPU 與負載增高時自動擴增。並在狀態解除後自動縮減。</li>
-					<li>部署 MQTT Cluster：從 image 打包到部署至 EC2 以及其主要監控，包含連線數、CPU / Memory 用量等將其發送至 Cloudwatch 收集。前端額外使用 Global Accelerator 加速連線。</li>
-					<li>部署靜態網站：使用 S3 + Cloudfront 搭建。</li>
-					<li>常用的服務設定管理：如 Elasticache / RDS Aurora 的設定管理維護等。</li>
-				</ul>
-			</dd>
-			<dd>
-				負責開發維護內部使用的 Job 排程機制（使用 AWS EventBridge 搭配 ECS）
-				<ul>
-					<li>使用 EventBridge 在指定時間點觸發啟動指定的 ECS Task 啟動開始執行，當執行完畢後即結束該工作。</li>
-					<li>工程師僅需按照規範撰寫所需程式碼及設定即可輕鬆部署</li>
-					<li>使用 Golang 設計 Job 運作環境，並撰寫部分 job 內容</li>
-				</ul>
-			</dd>
-			<dd>
-				使用 Grafana / Cloudwatch 等工具服務建立服務監視告警系統
-				<ul>
-					<li>監控與告警：搭建 Grafana 並串接 Cloudwatch 內收集的指標顯示，同時也針對指定的 Cloudwatch 指標設定監視，當超過特定值時發送警報給 SRE 或相關人等以便安排處理。</li>
-				</ul>
-			</dd>
-			<dd>
-				負責維護專案使用的 CI / CD 機制，主要使用 TravisCI / Github Actions
-				<ul>
-					<li>主要撰寫每個專案包含單元測試、打包成 docker image 以及部署的腳本</li>
-				</ul>
-			</dd>
-			<dd>
-				支援後端寫些 API
-				<ul>
-					<li>在 <a href="https://github.com/gin-gonic/gin">Gin</a> 為主要框架的基礎上，使用 XORM 撰寫一些資料庫（串接 MySQL）的 CRUD API</li>
-				</ul>
-			</dd>
-		</dl>
-		<h4><a href="https://presslogic.com">香港商台灣邏輯媒體科技有限公司台灣分公司</a></h4>
-		<dl>
-			<dt>Web / Backend Engineer（2018/07~2019/08）</dt>
-			<dd>
-				使用 GCP 設計建置公司使用的機器架構，包含 GCE / Cloud SQL 等
-				<ul>
-					<li>主要使用 GCP 網頁介面設定一些主要服務的屬性</li>
-					<li>搭配一些 shellscript 作為 GCE 的開機執行檔</li>
-				</ul>
-			</dd>
-			<dd>
-				使用 Elasticsearch / Logstash 建立資料同步查詢機制
-				<ul>
-					<li>安裝 Elasticsearch / Logstash 至指定的 GCE 上</li>
-					<li>並根據需要撰寫 Logstash 相關設定檔以便資料同步。主要做的有從 MySQL 同步資料到 Elasticsearch 等</li>
-				</ul>
-			</dd>
-			<dd>支援後端撰寫 API，主要使用 PHP 7.3，並維護公司使用的 CI / CD 服務，主要使用 Gitlab</dd>
-		</dl>
-		<h4>風尚數位科技股份有限公司（<a href="https://www.fashionguide.com.tw/">FashionGuide</a>）</h4>
-		<dl>
-			<dt>資深工程師（2017/10~2018/07）</dt>
-			<dd>維護公司使用的 AWS 服務，包括 EC2 / RDS 等</dd>
-			<dd>維護內部使用的 CI / CD 服務</dd>
-			<dd>協助系統程式開發，主要使用 PHP7 、 Laravel 5 與 MySQL</dd>
-		</dl>
-		<h4>全音樂股份有限公司（<a href="https://omusic.friday.tw/">friDay 音樂</a>）</h4>
-		<dl>
-			<dt>資深工程師（2016/06~2017/09）</dt>
-			<dd>
-				將部分舊系統遷移至新建立的全新平台的開發實作，主要使用 PHP、MySQL、Redis / RabbitMQ / ELK 等工具
-			</dd>
-			<dd>使用 ELK 與 RabbitMQ 建立 Log 分析機制</dd>
-		</dl>
-		<h4>新加坡商葆光資訊有限公司台灣分公司(ASAP閃電購物網)</h4>
-		<dl>
-			<dt>ERP 工程師 (2013/05~2015/07)</dt>
-			<dd>主要使用 PHP 與 Oracle 撰寫產生日常營運報表的 SQL，並產生畫面供財會單位參考。</dd>
-			<dd>維護 / 開發公司所使用的供應商關係管理系統</dd>
-		</dl>
-		<h4><a href="https://yahoo-emarketing.tumblr.com/">雅虎數位行銷有限公司（Yahoo!奇摩）</a></h4>
-		<dl>
-			<dt>工程師(派遣，2012/05~2013/02)</dt>
-			<dd>使用 PHP 和 MySQL 產生業績報表，並組成 Excel 寄給經銷商參考</dd>
-			<dd>活動網頁及相關工具開發</dd>
-		</dl>
-		<h4>露天市集國際資訊股份有限公司(<a href="https://www.ruten.com.tw/">露天拍賣</a>)</h4>
-		<dl>
-			<dt>工程師(2011/05~2012/04)</dt>
-			<dd>使用 PHP 與 Oracle 進行網站功能開發維護</dd>
-			<dd>與其他合作企業進行資料交換處理(透過FTP等)</dd>
-		</dl>
-		<h4>樂屋國際資訊股份有限公司(<a href="https://www.rakuya.com.tw/">樂屋網</a>)</h4>
-		<dl>
-			<dt>工程師(2008/08~2011/04)</dt>
-			<dd>使用 PHP 與 MySQL 開發維護網站功能(包含前端呈現與後端資料處理)</dd>
-			<dd>處理日常與各大房仲商的房屋物件資料交換處理(透過FTP、HTTP POST或是SOAP)</dd>
-		</dl>
-		<h4><a href="http://chinese.allproducts.com.tw/">亞普達國際電子商務股份有限公司</a></h4>
-		<dl>
-			<dt>工程師(2007/03~2008/06)</dt>
-			<dd>主要使用 PHP 與 MySQL 開發公司內部使用的工具</dd>
-		</dl>
-		<h4>瑞奇科技</h4>
-		<dl>
-			<dt>工程師(2006/09~2007/02)</dt>
-			<dd>負責公司網站主機維護</dd>
-			<dd>負責公司網站內容更新</dd>
-		</dl>
+    <!-- about -->
+    <section id="about" class="container section about">
+      <div class="section-head">
+        <span class="num">01 //</span>
+        <h2>關於我</h2>
+      </div>
+      <div class="about-body">
+        <p>我是謝育典，主要專長是網站開發以及系統管理。工作上前後端皆有碰觸，但多以後端為主。</p>
+        <p>早期主要使用 PHP，近期轉向以 Golang 為主、Python 為輔。</p>
+        <p>近年工作領域從單純 Backend 開發，跨足至 SRE / DevOps 領域，在 AWS / GCP 雲服務平台有一定的操作經驗。</p>
+      </div>
+    </section>
 
-		<h3>個人作品介紹</h3>
-		<!-- <h4><a href="https://chrome.google.com/webstore/detail/ha2tw%E6%8F%90%E4%BE%9B%E7%9A%84%E7%B8%AE%E7%B6%B2%E5%9D%80%E5%B7%A5%E5%85%B7/hmnmebggbipndpobodcdooilmlmmgfoc?utm_source=chrome-ntp-icon">ha2.tw提供的縮網址工具</a></h4>
-		<dl>
-			<dt>Chrome 瀏覽器擴充套件</dt>
-			<dd>當使用者按下右鍵選擇縮網址時，會直接打<a href="http://ha2.tw/shortener">我網站上的 API</a> 取得縮網址的結果</dd>
-			<dd>該擴充工具使用 javascript 與 Chrome 瀏覽器所提供的 API 完成</dd>
-		</dl> -->
+    <!-- skills -->
+    <section id="skills" class="container section">
+      <div class="section-head">
+        <span class="num">02 //</span>
+        <h2>技能</h2>
+      </div>
+      <div class="skill-grid">
+        <div class="card skill-card">
+          <h3>// 程式語言</h3>
+          <ul class="chips"><li>Golang</li><li>Python</li><li>PHP</li><li>TypeScript</li><li>VanillaJS</li><li>HTML / CSS</li><li>Shell Script</li></ul>
+        </div>
+        <div class="card skill-card">
+          <h3>// 框架與函式庫</h3>
+          <ul class="chips"><li>Gin</li><li>Fiber</li><li>Laravel</li><li>CodeIgniter</li><li>Vue.js</li><li>React</li><li>jQuery</li></ul>
+        </div>
+        <div class="card skill-card">
+          <h3>// 雲端與基礎設施</h3>
+          <ul class="chips"><li>AWS</li><li>GCP</li><li>Docker</li><li>Kubernetes</li><li>Linux (Ubuntu)</li></ul>
+        </div>
+        <div class="card skill-card">
+          <h3>// 資料庫與快取</h3>
+          <ul class="chips"><li>MySQL</li><li>Oracle</li><li>Redis</li><li>CloudFront</li></ul>
+        </div>
+        <div class="card skill-card">
+          <h3>// 訊息佇列與搜尋</h3>
+          <ul class="chips"><li>RabbitMQ</li><li><abbr title="Elasticsearch Logstash Kibana">ELK</abbr></li></ul>
+        </div>
+        <div class="card skill-card">
+          <h3>// CI/CD 與監控</h3>
+          <ul class="chips"><li>GitHub Actions</li><li>TravisCI</li><li>GitLab CI</li><li>Grafana</li><li>CloudWatch</li></ul>
+        </div>
+      </div>
+    </section>
 
-		<h4><a href="https://faryne.dev/tools/thread/capture">Threads 截圖工具</a></h4>
-		<dl>
-			<dt>截圖工具</dt>
-			<dd>傳入 Threads 貼文的網址，可擷取圖片並加上原討論串的 QR Code 後提供下載。</dd>
-			<dd>使用 ChromeDP 搭配 Headless Chrome 處理截圖功能</dd>
-			<dd>使用 OEmbed API 獲取 Threads 貼文內容及產生畫面</dd>
-		</dl>
+    <!-- work -->
+    <section id="work" class="container section">
+      <div class="section-head">
+        <span class="num">03 //</span>
+        <h2>工作經歷</h2>
+      </div>
 
-		<!--<h4><a href="http://ha2.tw/webshot">網頁截圖</a></h4>
-		<dl>
-			<dt>網頁截圖工具</dt>
-			<dd>前端網頁將網址 POST 到後端後，使用寫好的腳本，透過 <a href="http://phantomjs.org/">PhantomJS</a> 進行截圖(標準尺寸為1024x768)</dd>
-			<dd>並且提供歷史截圖列表可以做為變更依據</dd>
-		</dl>-->
+      <ol class="timeline">
+        <li class="job">
+          <div class="job-period">2022/10 – 2025/06</div>
+          <div class="job-body">
+            <h3 class="job-title">Golang 開發工程師 <span class="company">@ 眾鼎科技有限公司</span></h3>
+            <ul class="duties">
+              <li>設計並維護虛擬貨幣交易所之後台系統或服務，包含後端 API / cron 以及前端頁面的設計。
+                <ul>
+                  <li>使用 Golang / Gin Framework 設計開發後台系統</li>
+                  <li>串接主要虛擬幣交易所交易 API 以便處理對沖交易</li>
+                  <li>使用 Vue 3 / Ant-Design-Vue 處理後台系統的前端部分</li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="tags"><li>Go</li><li>Gin</li><li>Vue 3</li></ul>
+          </div>
+        </li>
 
-		<h4><a href="https://faryne.dev/data/rates">主要銀行匯率查詢</a></h4>
-		<dl>
-			<dt>網頁爬蟲</dt>
-			<dd>後端使用 PHP 與 Laravel 至幾家主要銀行爬取匯率資料存入至資料庫。</dd>
-			<dd>前端透過 ReactJS 搭配 Axios 經由 API 撈取資料並顯示，網站託管在 Firebase Hosting 上。</dd>
-		</dl>
+        <li class="job">
+          <div class="job-period">2019/10 – 2021/11</div>
+          <div class="job-body">
+            <h3 class="job-title">Senior Backend Engineer <span class="company">@ <a href="https://www.indochat.co.id">酷堤康科技股份有限公司</a></span></h3>
+            <ul class="duties">
+              <li>負責設計建立維護公司所使用的雲端服務架構（主要使用 AWS 服務，使用 CloudFormation / CDK (Golang) 設計維護）
+                <ul>
+                  <li>API 服務：主要使用 ECS Fargate 搭配 Load Balancer 分配流量給 ECS 的 Task，並使用 CloudFront 作 cache。搭配 AutoScaling 機制，在特定時間帶或是 ECS Service 的 CPU 與負載增高時自動擴增，並在狀態解除後自動縮減。</li>
+                  <li>部署 MQTT Cluster：從 image 打包到部署至 EC2 以及其主要監控，包含連線數、CPU / Memory 用量等將其發送至 CloudWatch 收集。前端額外使用 Global Accelerator 加速連線。</li>
+                  <li>部署靜態網站：使用 S3 + CloudFront 搭建。</li>
+                  <li>常用的服務設定管理：如 ElastiCache / RDS Aurora 的設定管理維護等。</li>
+                </ul>
+              </li>
+              <li>負責開發維護內部使用的 Job 排程機制（使用 AWS EventBridge 搭配 ECS）
+                <ul>
+                  <li>使用 EventBridge 在指定時間點觸發啟動指定的 ECS Task 開始執行，執行完畢後即結束該工作。</li>
+                  <li>工程師僅需按照規範撰寫所需程式碼及設定即可輕鬆部署</li>
+                  <li>使用 Golang 設計 Job 運作環境，並撰寫部分 job 內容</li>
+                </ul>
+              </li>
+              <li>使用 Grafana / CloudWatch 等工具服務建立服務監視告警系統
+                <ul>
+                  <li>監控與告警：搭建 Grafana 並串接 CloudWatch 內收集的指標顯示，同時針對指定的 CloudWatch 指標設定監視，當超過特定值時發送警報給 SRE 或相關人等以便安排處理。</li>
+                </ul>
+              </li>
+              <li>負責維護專案使用的 CI / CD 機制，主要使用 TravisCI / GitHub Actions
+                <ul>
+                  <li>主要撰寫每個專案包含單元測試、打包成 docker image 以及部署的腳本</li>
+                </ul>
+              </li>
+              <li>支援後端寫些 API
+                <ul>
+                  <li>在 <a href="https://github.com/gin-gonic/gin">Gin</a> 為主要框架的基礎上，使用 XORM 撰寫一些資料庫（串接 MySQL）的 CRUD API</li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="tags"><li>AWS</li><li>CDK</li><li>ECS</li><li>EventBridge</li><li>Grafana</li></ul>
+          </div>
+        </li>
 
-		<h4><a href="https://faryne.dev/data/tw-stats">主計總處各縣市指標</a></h4>
-		<dl>
-			<dt>網頁爬蟲</dt>
-			<dd>使用 Golang 抓取主計總處所提供 XML，並整理成 json 檔存入 <a href="https://github.com/faryne/tw-stats">Github</a></dd>
-			<dd>前端使用 ReactJS 搭配 Axios 即時抓取 Github 上面的紀錄與檔案顯示內容</dd>
-		</dl>
+        <li class="job">
+          <div class="job-period">2018/07 – 2019/08</div>
+          <div class="job-body">
+            <h3 class="job-title">Web / Backend Engineer <span class="company">@ <a href="https://presslogic.com">香港商台灣邏輯媒體科技有限公司台灣分公司</a></span></h3>
+            <ul class="duties">
+              <li>使用 GCP 設計建置公司使用的機器架構，包含 GCE / Cloud SQL 等
+                <ul>
+                  <li>主要使用 GCP 網頁介面設定一些主要服務的屬性</li>
+                  <li>搭配一些 shell script 作為 GCE 的開機執行檔</li>
+                </ul>
+              </li>
+              <li>使用 Elasticsearch / Logstash 建立資料同步查詢機制
+                <ul>
+                  <li>安裝 Elasticsearch / Logstash 至指定的 GCE 上</li>
+                  <li>根據需要撰寫 Logstash 相關設定檔以便資料同步，主要做的有從 MySQL 同步資料到 Elasticsearch 等</li>
+                </ul>
+              </li>
+              <li>支援後端撰寫 API，主要使用 PHP 7.3，並維護公司使用的 CI / CD 服務，主要使用 GitLab</li>
+            </ul>
+            <ul class="tags"><li>GCP</li><li>Elasticsearch</li><li>Logstash</li><li>PHP</li></ul>
+          </div>
+        </li>
 
-		<h4><a href="https://faryne.dev/av/video">DMM 影片搜尋</a></h4>
-		<dl>
-			<dt>網頁爬蟲</dt>
-			<dd>使用 Golang 撰寫爬蟲爬取 Fanza （舊稱：DMM）上的影片及女優資料</dd>
-			<dd>資料透過 Logstash 定期從 MySQL 同步到 Elasticsearch</dd>
-			<dd>使用 ReactJS 構建前端網站</dd>
-		</dl>
+        <li class="job">
+          <div class="job-period">2017/10 – 2018/07</div>
+          <div class="job-body">
+            <h3 class="job-title">資深工程師 <span class="company">@ 風尚數位科技股份有限公司（<a href="https://www.fashionguide.com.tw/">FashionGuide</a>）</span></h3>
+            <ul class="duties">
+              <li>維護公司使用的 AWS 服務，包括 EC2 / RDS 等</li>
+              <li>維護內部使用的 CI / CD 服務</li>
+              <li>協助系統程式開發，主要使用 PHP 7、Laravel 5 與 MySQL</li>
+            </ul>
+            <ul class="tags"><li>AWS</li><li>PHP</li><li>Laravel</li></ul>
+          </div>
+        </li>
 
-		<!-- <h4><a href="https://faryne-firebase.web.app/hololive">Vtuber 直播資訊彙整</a></h4>
-		<dl>
-			<dt>網頁爬蟲</dt>
-			<dd>使用 PHP 與 Google App Script 爬取官方網站藝人列表及直播時間資訊</dd>
-			<dd>直播事件時間可以寫入 Google Calendar</dd>
-		</dl> -->
-		
+        <li class="job">
+          <div class="job-period">2016/06 – 2017/09</div>
+          <div class="job-body">
+            <h3 class="job-title">資深工程師 <span class="company">@ 全音樂股份有限公司（<a href="https://omusic.friday.tw/">friDay 音樂</a>）</span></h3>
+            <ul class="duties">
+              <li>將部分舊系統遷移至新建立的全新平台的開發實作，主要使用 PHP、MySQL、Redis / RabbitMQ / ELK 等工具</li>
+              <li>使用 ELK 與 RabbitMQ 建立 Log 分析機制</li>
+            </ul>
+            <ul class="tags"><li>PHP</li><li>RabbitMQ</li><li>ELK</li></ul>
+          </div>
+        </li>
+      </ol>
 
-		<h4><a href="https://faryne.dev/data/taipower/neighbor">台電敦親睦鄰捐助統計</a></h4>
-		<dl>
-			<dt>網頁爬蟲</dt>
-			<dd>使用 Golang 以及自製的爬蟲整理出台電敦親睦鄰捐助統計</dd>
-			<dd>資料會在爬完後即時塞入 DB 以及 Elasticsearch 後作搜尋處理</dd>
-		</dl
+      <details class="older">
+        <summary><span class="show">+ 顯示更早的 6 份經歷（2006 – 2015）</span><span class="hide">− 收合較早的經歷</span></summary>
+        <ol class="timeline">
+          <li class="job">
+            <div class="job-period">2013/05 – 2015/07</div>
+            <div class="job-body">
+              <h3 class="job-title">ERP 工程師 <span class="company">@ 新加坡商葆光資訊有限公司台灣分公司（ASAP 閃電購物網）</span></h3>
+              <ul class="duties">
+                <li>主要使用 PHP 與 Oracle 撰寫產生日常營運報表的 SQL，並產生畫面供財會單位參考。</li>
+                <li>維護 / 開發公司所使用的供應商關係管理系統</li>
+              </ul>
+              <ul class="tags"><li>PHP</li><li>Oracle</li></ul>
+            </div>
+          </li>
+          <li class="job">
+            <div class="job-period">2012/05 – 2013/02</div>
+            <div class="job-body">
+              <h3 class="job-title">工程師（派遣） <span class="company">@ <a href="https://yahoo-emarketing.tumblr.com/">雅虎數位行銷有限公司（Yahoo!奇摩）</a></span></h3>
+              <ul class="duties">
+                <li>使用 PHP 和 MySQL 產生業績報表，並組成 Excel 寄給經銷商參考</li>
+                <li>活動網頁及相關工具開發</li>
+              </ul>
+              <ul class="tags"><li>PHP</li><li>MySQL</li></ul>
+            </div>
+          </li>
+          <li class="job">
+            <div class="job-period">2011/05 – 2012/04</div>
+            <div class="job-body">
+              <h3 class="job-title">工程師 <span class="company">@ 露天市集國際資訊股份有限公司（<a href="https://www.ruten.com.tw/">露天拍賣</a>）</span></h3>
+              <ul class="duties">
+                <li>使用 PHP 與 Oracle 進行網站功能開發維護</li>
+                <li>與其他合作企業進行資料交換處理（透過 FTP 等）</li>
+              </ul>
+              <ul class="tags"><li>PHP</li><li>Oracle</li></ul>
+            </div>
+          </li>
+          <li class="job">
+            <div class="job-period">2008/08 – 2011/04</div>
+            <div class="job-body">
+              <h3 class="job-title">工程師 <span class="company">@ 樂屋國際資訊股份有限公司（<a href="https://www.rakuya.com.tw/">樂屋網</a>）</span></h3>
+              <ul class="duties">
+                <li>使用 PHP 與 MySQL 開發維護網站功能（包含前端呈現與後端資料處理）</li>
+                <li>處理日常與各大房仲商的房屋物件資料交換處理（透過 FTP、HTTP POST 或是 SOAP）</li>
+              </ul>
+              <ul class="tags"><li>PHP</li><li>MySQL</li></ul>
+            </div>
+          </li>
+          <li class="job">
+            <div class="job-period">2007/03 – 2008/06</div>
+            <div class="job-body">
+              <h3 class="job-title">工程師 <span class="company">@ <a href="http://chinese.allproducts.com.tw/">亞普達國際電子商務股份有限公司</a></span></h3>
+              <ul class="duties">
+                <li>主要使用 PHP 與 MySQL 開發公司內部使用的工具</li>
+              </ul>
+              <ul class="tags"><li>PHP</li><li>MySQL</li></ul>
+            </div>
+          </li>
+          <li class="job">
+            <div class="job-period">2006/09 – 2007/02</div>
+            <div class="job-body">
+              <h3 class="job-title">工程師 <span class="company">@ 瑞奇科技</span></h3>
+              <ul class="duties">
+                <li>負責公司網站主機維護</li>
+                <li>負責公司網站內容更新</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </details>
+    </section>
 
-		<h4><a href="https://faryne.dev/data/fire/realtime/">即時消防出勤記錄</a></h4>
-		<dl>
-			<dt>網頁爬蟲</dt>
-			<dd>使用 Golang 以及自製的爬蟲 service 去爬取六都的消防出勤記錄（目前台南與高雄部分因為機器區域限制而無法讀取）</dd>
-		</dl>
+    <!-- projects -->
+    <section id="projects" class="container section">
+      <div class="section-head">
+        <span class="num">04 //</span>
+        <h2>個人作品</h2>
+      </div>
+      <div class="project-grid">
+        <a class="card project" href="https://faryne.dev/tools/thread/capture">
+          <div class="project-top"><span>截圖工具</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"></path></svg></div>
+          <h3>Threads 截圖工具</h3>
+          <p>傳入 Threads 貼文的網址，可擷取圖片並加上原討論串的 QR Code 後提供下載。使用 ChromeDP 搭配 Headless Chrome 處理截圖，並以 oEmbed API 獲取貼文內容及產生畫面。</p>
+          <ul class="stack"><li>Go</li><li>ChromeDP</li><li>Headless Chrome</li><li>oEmbed</li></ul>
+        </a>
+        <a class="card project" href="https://neko.maid.tw">
+          <div class="project-top"><span>網頁爬蟲</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"></path></svg></div>
+          <h3>難以名狀的抓圖器</h3>
+          <p>使用者拋送網站代碼及作品 ID，爬蟲即時解析圖片位址和標題等資訊，抓取圖片後存放至 AWS S3，並由 CloudFront 串聯 S3 出圖以提升全球存取速度；站內搜尋使用 Elasticsearch。新版網站使用 ReactJS 搭配 Codex 撰寫。</p>
+          <ul class="stack"><li>AWS S3</li><li>CloudFront</li><li>Elasticsearch</li><li>React</li></ul>
+        </a>
+        <a class="card project" href="https://faryne.dev/av/video">
+          <div class="project-top"><span>網頁爬蟲</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"></path></svg></div>
+          <h3>DMM 影片搜尋</h3>
+          <p>使用 Golang 撰寫爬蟲爬取 Fanza（舊稱 DMM）上的影片及女優資料，透過 Logstash 定期從 MySQL 同步到 Elasticsearch，前端以 ReactJS 構建。</p>
+          <ul class="stack"><li>Go</li><li>MySQL</li><li>Logstash</li><li>Elasticsearch</li><li>React</li></ul>
+        </a>
+        <a class="card project" href="https://faryne.dev/data/rates">
+          <div class="project-top"><span>網頁爬蟲</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"></path></svg></div>
+          <h3>主要銀行匯率查詢</h3>
+          <p>後端使用 PHP 與 Laravel 至幾家主要銀行爬取匯率資料存入資料庫；前端透過 ReactJS 搭配 Axios 經由 API 撈取資料並顯示，網站託管在 Firebase Hosting 上。</p>
+          <ul class="stack"><li>PHP</li><li>Laravel</li><li>React</li><li>Firebase</li></ul>
+        </a>
+        <a class="card project" href="https://faryne.dev/data/tw-stats">
+          <div class="project-top"><span>網頁爬蟲</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"></path></svg></div>
+          <h3>主計總處各縣市指標</h3>
+          <p>使用 Golang 抓取主計總處所提供的 XML，整理成 JSON 檔存入 GitHub（faryne/tw-stats）；前端使用 ReactJS 搭配 Axios 即時抓取 GitHub 上的紀錄與檔案顯示內容。</p>
+          <ul class="stack"><li>Go</li><li>GitHub</li><li>React</li></ul>
+        </a>
+        <a class="card project" href="https://faryne.dev/data/taipower/neighbor">
+          <div class="project-top"><span>網頁爬蟲</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"></path></svg></div>
+          <h3>台電敦親睦鄰捐助統計</h3>
+          <p>使用 Golang 以及自製的爬蟲整理出台電敦親睦鄰捐助統計，資料爬完後即時寫入 DB 以及 Elasticsearch 供搜尋。</p>
+          <ul class="stack"><li>Go</li><li>Elasticsearch</li></ul>
+        </a>
+        <a class="card project" href="https://faryne.dev/data/fire/realtime/">
+          <div class="project-top"><span>網頁爬蟲</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"></path></svg></div>
+          <h3>即時消防出勤記錄</h3>
+          <p>使用 Golang 以及自製的爬蟲 service 爬取六都的消防出勤記錄（目前台南與高雄部分因為機器區域限制而無法讀取）。</p>
+          <ul class="stack"><li>Go</li><li>Crawler</li></ul>
+        </a>
+        <a class="card project" href="https://github.com/faryne/integration">
+          <div class="project-top"><span>GitHub</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"></path></svg></div>
+          <h3>前後端整合專案</h3>
+          <p>使用 Golang + Fiber 構建後端，前端則使用 ReactJS 構建。</p>
+          <ul class="stack"><li>Go</li><li>Fiber</li><li>React</li></ul>
+        </a>
+      </div>
+      <!--
+        已下架的作品：
+        - ha2.tw 提供的縮網址工具（Chrome 擴充套件）
+        - 網頁截圖（PhantomJS）
+        - Vtuber 直播資訊彙整（https://faryne-firebase.web.app/hololive）
+      -->
+    </section>
 
-		<h4><a href="https://neko.maid.tw">難以名狀的抓圖器</a></h4>
-		<dl>
-			<dt>網頁爬蟲</dt>
-			<dd>使用者拋送網站代碼及作品ID，爬蟲會及時解析圖片位址和標題等資訊，並根據擷取到的圖片位址抓取圖片檔案並丟至 <a href="https://aws.amazon.com/tw/s3/">AWS S3</a> 儲放</dd>
-			<dd>前端網站的出圖由 <a href="https://aws.amazon.com/tw/cloudfront/">AWS CloudFront</a> 串聯 AWS S3 負責，提升全球各地的存取速度。</dd>
-			<dd>並且使用 Elasticsearch 處理站內搜尋功能</dd>
-			<dd><a href="https://neko.maid.tw">新版網站</a>使用 ReactJS 搭配 Codex 撰寫</dd>
-		</dl>
+    <!-- education + certs -->
+    <section class="container section split">
+      <div>
+        <div class="section-head">
+          <span class="num">05 //</span>
+          <h2>學歷</h2>
+        </div>
+        <ul class="edu">
+          <li><span>國立空中大學 管理資訊學系 <span class="status">畢業</span></span><span class="years">2010/09 – 2024/06</span></li>
+          <li><span>天主教輔仁大學 歷史學系 <span class="status">肄業</span></span><span class="years">2001/09 – 2003/06</span></li>
+          <li><span>臺北市立陽明高中 <span class="status">畢業</span></span><span class="years">1998/09 – 2001/06</span></li>
+        </ul>
+      </div>
+      <div>
+        <div class="section-head">
+          <span class="num">06 //</span>
+          <h2>證照</h2>
+        </div>
+        <div class="badges">
+          <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="4356d6ac-42bb-48b6-8d90-75e6978a8d77" data-share-badge-host="https://www.credly.com"></div>
+          <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="076b834c-57e4-4e76-a1ca-e2e98b4117ee" data-share-badge-host="https://www.credly.com"></div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-		<h4>個人 Github Repositories 及其他相關資料</h4>
-		<ul>
-			<li><a href="https://github.com/faryne/integration">前後端整合專案</a>，使用 Golang + Fiber 構建後端，前端則使用 ReactJS 構建。</li>
-			<li><a href="https://docs.google.com/presentation/d/1fVsqd0e6CquLgsFEeXGnIs--wmhpCMKd/edit?usp=sharing&ouid=104802345237603796061&rtpof=true&sd=true">個人工作成果分享</a></li>
-		</ul>
+  <footer id="contact" class="footer">
+    <div class="container">
+      <div class="footer-text">
+        <span class="cmd" lang="en">$ echo "let's talk"</span>
+        <strong>有合作機會？歡迎聯絡我。</strong>
+      </div>
+      <div class="actions">
+        <span class="mail-chip"><img src="mail.png" width="140" height="21" alt="Email 地址（圖片）"></span>
+        <a class="btn" href="https://docs.google.com/presentation/d/1fVsqd0e6CquLgsFEeXGnIs--wmhpCMKd/edit?usp=sharing&amp;ouid=104802345237603796061&amp;rtpof=true&amp;sd=true">個人工作成果分享</a>
+      </div>
+    </div>
+  </footer>
 
-  	</div>
-  	<script type="text/javascript">
-  	$(function(){
-  		$('a').on('click', function(e){
-  			e.preventDefault();
-			  var h = $(this).attr('href')
-			  gtag("event", "click", {
-			    "event_category": "link",
-			    "event_label": h
-			  });
-  			window.open(h, '_ex_detail');
-  		});
-  	});
-  	</script>
-  	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-96598-10"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'UA-96598-10');
-	</script>
-  </body>
+  <script src="https://cdn.credly.com/assets/utilities/embed.js" async></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96598-10"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-96598-10');
+  </script>
+  <script src="assets/site.js"></script>
+</body>
 </html>
