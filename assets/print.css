@@ -1,0 +1,136 @@
+/* A4 résumé: one ink colour plus a dark olive accent that holds up in greyscale */
+:root {
+  --ink: #1a1d23;
+  --ink-2: #3a404b;
+  --muted: #5a6170;
+  --rule: #d6d9de;
+  --accent: #3f6212;
+  --paper: #ffffff;
+  --desk: #e6e8eb;
+  --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --sans: 'Noto Sans TC', system-ui, -apple-system, 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+  color-scheme: light;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+body {
+  margin: 0;
+  background: var(--desk);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 10pt;
+  line-height: 1.6;
+}
+
+a { color: inherit; text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* ---------- screen toolbar ---------- */
+.toolbar {
+  max-width: 210mm; margin: 24px auto 0; padding: 0 16px;
+  display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; align-items: center;
+  font-size: 14px;
+}
+.toolbar a, .toolbar button {
+  display: inline-flex; align-items: center; min-height: 40px; padding: 0 16px;
+  border: 1px solid #b9bec7; border-radius: 6px; background: var(--paper);
+  color: var(--ink); font: inherit; cursor: pointer;
+}
+.toolbar a:hover { text-decoration: none; border-color: var(--muted); }
+.toolbar .primary { background: var(--ink); border-color: var(--ink); color: var(--paper); font-weight: 700; }
+
+/* ---------- the sheet ---------- */
+.sheet {
+  width: 210mm; max-width: calc(100% - 32px); min-height: 297mm;
+  margin: 16px auto 48px; padding: 16mm 15mm;
+  background: var(--paper);
+  box-shadow: 0 2px 12px rgba(26, 29, 35, .12);
+}
+
+/* header: avatar | name | contacts, the same three cells the old table had */
+.head {
+  display: grid; grid-template-columns: 26mm minmax(0, 1fr) auto; gap: 6mm; align-items: center;
+  padding-bottom: 5mm; border-bottom: 2px solid var(--ink);
+}
+.head img.avatar { width: 26mm; height: 26mm; border-radius: 3mm; display: block; }
+.head h1 { margin: 0; font-size: 22pt; line-height: 1.15; font-weight: 900; }
+.head h1 .alt { margin-left: 3mm; font-size: 13pt; font-weight: 500; color: var(--muted); }
+.head .role { margin: 1.5mm 0 0; font-family: var(--mono); font-size: 10.5pt; font-weight: 600; color: var(--accent); }
+.contacts { margin: 0; padding: 0; list-style: none; display: grid; gap: 1.2mm; font-size: 9pt; }
+.contacts li { display: grid; grid-template-columns: 13mm auto; align-items: center; gap: 2mm; }
+.contacts .k { font-family: var(--mono); font-size: 8pt; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+.contacts .v { font-family: var(--mono); }
+.contacts img { display: block; height: 4.2mm; width: auto; }
+
+/* sections */
+.sec { margin-top: 6mm; }
+.sec > h2 {
+  margin: 0 0 3mm; padding-bottom: 1.2mm; border-bottom: 1px solid var(--rule);
+  font-size: 12pt; font-weight: 900; letter-spacing: .02em;
+  display: flex; align-items: baseline; gap: 2.5mm;
+  break-after: avoid; page-break-after: avoid;
+}
+.sec > h2 .en { font-family: var(--mono); font-size: 8pt; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: .08em; }
+.sec p { margin: 0 0 1.5mm; color: var(--ink-2); }
+
+.cols { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr); gap: 8mm; }
+.cols > .sec { margin-top: 6mm; }
+
+/* education */
+.edu { margin: 0; padding: 0; list-style: none; display: grid; gap: 2.2mm; }
+.edu li { display: flex; flex-direction: column; }
+.edu .school { font-weight: 700; }
+.edu .meta { font-family: var(--mono); font-size: 8.5pt; color: var(--muted); }
+
+/* skills */
+.skills { margin: 0; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 1.4mm 4mm; }
+.skills dt { font-weight: 700; white-space: nowrap; }
+.skills dd { margin: 0; color: var(--ink-2); }
+
+/* certifications */
+.badges { display: flex; flex-wrap: wrap; gap: 4mm; break-inside: avoid; page-break-inside: avoid; }
+
+/* experience */
+.jobs { margin: 0; padding: 0; list-style: none; display: grid; gap: 3.6mm; }
+.job { display: grid; grid-template-columns: 30mm minmax(0, 1fr); gap: 4mm; break-inside: avoid; page-break-inside: avoid; }
+.job.long { break-inside: auto; page-break-inside: auto; }
+.job .period { font-family: var(--mono); font-size: 8.5pt; color: var(--muted); padding-top: .6mm; font-variant-numeric: tabular-nums; }
+.job h3 { margin: 0; font-size: 10.5pt; font-weight: 700; }
+.job h3 .company { font-weight: 400; color: var(--muted); }
+.job ul { margin: 1mm 0 0; padding-left: 4.2mm; color: var(--ink-2); }
+.job ul ul { margin-top: .5mm; font-size: 9pt; color: var(--muted); }
+.job h3 { break-after: avoid; page-break-after: avoid; }
+.job li li { break-inside: avoid; page-break-inside: avoid; }
+.job li::marker { color: var(--accent); }
+
+/* projects */
+.projects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 3.2mm 7mm; }
+.project { break-inside: avoid; page-break-inside: avoid; }
+.project h3 { margin: 0; font-size: 10pt; font-weight: 700; }
+.project .url { display: block; font-family: var(--mono); font-size: 7.8pt; color: var(--accent); word-break: break-all; }
+.project p { margin: .6mm 0 0; font-size: 9pt; line-height: 1.55; color: var(--ink-2); }
+.project .stack { margin-top: .6mm; font-family: var(--mono); font-size: 7.8pt; color: var(--muted); }
+
+/* ---------- phone screens ---------- */
+@media screen and (max-width: 720px) {
+  .sheet { width: auto; min-height: 0; padding: 20px 16px; margin: 12px 16px 32px; max-width: none; }
+  .head { grid-template-columns: 64px minmax(0, 1fr); }
+  .head img.avatar { width: 64px; height: 64px; }
+  .contacts { grid-column: 1 / -1; }
+  .cols, .projects { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .job { grid-template-columns: minmax(0, 1fr); gap: 0; }
+}
+
+/* ---------- paper ---------- */
+@page { size: A4; margin: 13mm 14mm 14mm; }
+
+@media print {
+  body { background: var(--paper); }
+  .toolbar { display: none; }
+  .sheet { width: auto; max-width: none; min-height: 0; margin: 0; padding: 0; box-shadow: none; }
+  a:hover { text-decoration: none; }
+}

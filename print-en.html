@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Faryne Hsieh｜Résumé (Print)</title>
+  <meta name="description" content="Printable A4 résumé of Faryne Hsieh (謝育典).">
+  <link rel="alternate" hreflang="zh-Hant" href="print.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Noto+Sans+TC:wght@400;500;700;900&display=swap">
+  <link rel="stylesheet" href="assets/print.css">
+</head>
+<body>
+  <div class="toolbar">
+    <a href="index-en.html">← Back to site</a>
+    <a href="print.html" hreflang="zh-Hant" lang="zh-Hant">中文</a>
+    <button type="button" class="primary" id="print-btn">Print / Save as PDF</button>
+  </div>
+
+  <main class="sheet">
+    <header class="head">
+      <img class="avatar" src="https://www.gravatar.com/avatar/6ea548a4a4679eb99055d00a80a593c3?s=200" width="98" height="98" alt="Avatar of Faryne Hsieh">
+      <div>
+        <h1>Faryne Hsieh<span class="alt" lang="zh-Hant">謝育典</span></h1>
+        <p class="role">Backend &amp; SRE Engineer</p>
+      </div>
+      <ul class="contacts">
+        <li><span class="k">Web</span><a class="v" href="https://faryne.dev/">faryne.dev</a></li>
+        <li><span class="k">GitHub</span><a class="v" href="https://github.com/faryne">github.com/faryne</a></li>
+        <li><span class="k">Email</span><img src="mail.png" width="140" height="21" alt="Email address (image)"></li>
+      </ul>
+    </header>
+
+    <section class="sec">
+      <h2>About</h2>
+      <p>I'm Faryne Hsieh, specializing in web development and system administration. I have worked on both frontend and backend, with most of my time on the backend. I started out mainly with PHP and have since moved to Golang as my primary language, with Python on the side. In recent years my work has grown from pure backend development into SRE / DevOps, with solid hands-on experience on AWS and GCP.</p>
+    </section>
+
+    <div class="cols">
+      <section class="sec">
+        <h2>Education</h2>
+        <ul class="edu">
+          <li><span class="school">Management &amp; Information, National Open University</span><span class="meta">B.A. · 2010/09 – 2024/06</span></li>
+          <li><span class="school">History, Fu Jen Catholic University</span><span class="meta">not completed · 2001/09 – 2003/06</span></li>
+        </ul>
+      </section>
+      <section class="sec">
+        <h2>Skills</h2>
+        <dl class="skills">
+          <dt>Languages</dt><dd>Golang, Python, PHP, TypeScript, VanillaJS, HTML / CSS, Shell Script</dd>
+          <dt>Frameworks</dt><dd>Gin, Fiber, Laravel, CodeIgniter, Vue.js, React, jQuery</dd>
+          <dt>Cloud &amp; Infra</dt><dd>AWS, GCP, Docker, Kubernetes, Linux (Ubuntu)</dd>
+          <dt>Data &amp; Caching</dt><dd>MySQL, Oracle, Redis, CloudFront</dd>
+          <dt>Messaging &amp; Search</dt><dd>RabbitMQ, ELK (Elasticsearch / Logstash / Kibana)</dd>
+          <dt>CI/CD &amp; Monitoring</dt><dd>GitHub Actions, TravisCI, GitLab CI, Grafana, CloudWatch</dd>
+        </dl>
+      </section>
+    </div>
+
+    <section class="sec">
+      <h2>Certifications</h2>
+      <div class="badges">
+        <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="4356d6ac-42bb-48b6-8d90-75e6978a8d77" data-share-badge-host="https://www.credly.com"></div>
+        <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="076b834c-57e4-4e76-a1ca-e2e98b4117ee" data-share-badge-host="https://www.credly.com"></div>
+      </div>
+    </section>
+
+    <section class="sec">
+      <h2>Experience</h2>
+      <ol class="jobs">
+        <li class="job">
+          <div class="period">2022/10 – 2025/06</div>
+          <div>
+            <h3>Golang Developer <span class="company">· Mending Technology Co., Ltd.</span></h3>
+            <ul>
+              <li>Designed and maintained admin consoles and services for a cryptocurrency exchange, including backend APIs / cron jobs and frontend pages.
+                <ul>
+                  <li>Built the admin consoles with Golang and the Gin framework</li>
+                  <li>Integrated the trading APIs of major exchanges to handle hedging trades</li>
+                  <li>Built the admin frontend with Vue 3 / Ant Design Vue</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="job long">
+          <div class="period">2019/10 – 2021/11</div>
+          <div>
+            <h3>Senior Backend Engineer <span class="company">· QTComm Inc.</span></h3>
+            <ul>
+              <li>Designed and maintained the AWS cloud infrastructure (ECS Fargate, RDS, CloudWatch, etc.) with CloudFormation and AWS CDK.
+                <ul>
+                  <li>API service: deployed APIs on ECS Fargate behind a load balancer with CloudFront caching, and configured autoscaling by schedule and by CPU / memory usage.</li>
+                  <li>MQTT cluster: built and deployed the MQTT cluster on EC2 with monitoring, using Global Accelerator to speed up connections.</li>
+                  <li>Static sites: S3 for static files with CloudFront as the CDN.</li>
+                  <li>Maintained the configuration of ElastiCache (Redis) and RDS Aurora (MySQL).</li>
+                </ul>
+              </li>
+              <li>Designed a job scheduling system with EventBridge and ECS
+                <ul>
+                  <li>Designed the job runtime and deployment workflow in Golang</li>
+                  <li>Set up job schedule rules on EventBridge</li>
+                </ul>
+              </li>
+              <li>Set up Grafana monitoring dashboards and alerting
+                <ul>
+                  <li>Used CloudWatch as the data source to show API service logs and metrics in Grafana</li>
+                  <li>Set up alerts on CloudWatch metrics; when a metric crosses its threshold, CloudWatch triggers SNS and sends the alert to Slack</li>
+                </ul>
+              </li>
+              <li>Maintained CI/CD configuration on TravisCI / GitHub Actions</li>
+            </ul>
+          </div>
+        </li>
+        <li class="job">
+          <div class="period">2018/07 – 2019/08</div>
+          <div>
+            <h3>Web / Backend Engineer <span class="company">· PressLogic Ltd., Taiwan Branch</span></h3>
+            <ul>
+              <li>Designed the infrastructure on GCP, including GCE, Cloud SQL, etc.
+                <ul>
+                  <li>Primarily used GCE, Cloud SQL (MySQL) and Memorystore (Redis)</li>
+                  <li>Created and maintained shell scripts for instance startup</li>
+                </ul>
+              </li>
+              <li>Set up data syncing between MySQL and Elasticsearch with Logstash
+                <ul>
+                  <li>Created and maintained the Logstash configuration</li>
+                  <li>Synced data from MySQL to Elasticsearch</li>
+                </ul>
+              </li>
+              <li>Maintained the CI/CD service on GitLab</li>
+            </ul>
+          </div>
+        </li>
+        <li class="job">
+          <div class="period">2017/10 – 2018/07</div>
+          <div>
+            <h3>Senior Engineer <span class="company">· FashionGuide Inc.</span></h3>
+            <ul>
+              <li>Managed AWS services, including EC2, RDS, etc.</li>
+              <li>Maintained the CI/CD service</li>
+              <li>Assisted with service development, primarily using PHP 7 / MySQL / Laravel 5.x</li>
+            </ul>
+          </div>
+        </li>
+        <li class="job">
+          <div class="period">2016/06 – 2017/09</div>
+          <div>
+            <h3>Senior Engineer <span class="company">· Omusic Co., Ltd.</span></h3>
+            <ul>
+              <li>Built a new system foundation using PHP, MySQL, Redis, RabbitMQ, etc.</li>
+              <li>Built log analysis with ELK and RabbitMQ</li>
+            </ul>
+          </div>
+        </li>
+        <li class="job">
+          <div class="period">2013/05 – 2015/07</div>
+          <div>
+            <h3>ERP Engineer <span class="company">· Uitox Inc. (ASAP)</span></h3>
+            <ul>
+              <li>Generated daily business reports through tools built on customized SQL queries</li>
+              <li>Maintained and developed the supplier relationship management system</li>
+            </ul>
+          </div>
+        </li>
+        <li class="job">
+          <div class="period">2012/05 – 2013/02</div>
+          <div>
+            <h3>Engineer (Contract) <span class="company">· Yahoo Digital Marketing Inc.</span></h3>
+            <ul>
+              <li>Generated sales reports with tools written in PHP / MySQL and sent them to retail partners</li>
+              <li>Developed campaign pages and related tools</li>
+            </ul>
+          </div>
+        </li>
+        <li class="job">
+          <div class="period">2011/05 – 2012/04</div>
+          <div>
+            <h3>Engineer <span class="company">· PChome eBay Co., Ltd.</span></h3>
+            <ul>
+              <li>Developed and maintained site features using PHP / Oracle</li>
+              <li>Handled daily logistics data exchange with partners</li>
+            </ul>
+          </div>
+        </li>
+        <li class="job">
+          <div class="period">2008/08 – 2011/04</div>
+          <div>
+            <h3>Engineer <span class="company">· Rakuya Inc.</span></h3>
+            <ul>
+              <li>Developed and maintained website features using PHP / MySQL (both frontend and backend)</li>
+              <li>Handled daily data exchange with partners via FTP / SOAP / HTTP POST</li>
+            </ul>
+          </div>
+        </li>
+        <li class="job">
+          <div class="period">2007/03 – 2008/06</div>
+          <div>
+            <h3>Engineer <span class="company">· All Products Online Corporation</span></h3>
+            <ul>
+              <li>Developed and maintained internal tools with PHP / MySQL</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="sec">
+      <h2>Side Projects</h2>
+      <div class="projects">
+        <div class="project">
+          <h3>SteamLoom</h3>
+          <a class="url" href="https://steamloom.works">steamloom.works</a>
+          <p>An online writing workspace: projects hold stories, worldbuilding lore and image assets, with chapter editing, version history and persistent writing memories, plus an MCP server so external AI clients can read and edit works directly.</p>
+          <div class="stack">AI · MCP</div>
+        </div>
+        <div class="project">
+          <h3>Threads Capture</h3>
+          <a class="url" href="https://faryne.dev/tools/thread/capture">faryne.dev/tools/thread/capture</a>
+          <p>Turns a Threads post URL into a downloadable screenshot with a QR code back to the thread; screenshots via ChromeDP and headless Chrome, post content via the oEmbed API.</p>
+          <div class="stack">Go · ChromeDP · Headless Chrome · oEmbed</div>
+        </div>
+        <div class="project">
+          <h3>The Indescribable Image Grabber</h3>
+          <a class="url" href="https://neko.maid.tw">neko.maid.tw</a>
+          <p>Resolves and fetches images by site code and work ID into AWS S3, served through CloudFront; site search on Elasticsearch, new frontend written in React with Codex.</p>
+          <div class="stack">AWS S3 · CloudFront · Elasticsearch · React</div>
+        </div>
+        <div class="project">
+          <h3>DMM Video Search</h3>
+          <a class="url" href="https://faryne.dev/av/video">faryne.dev/av/video</a>
+          <p>A Golang crawler collects video and actress data from Fanza (formerly DMM); Logstash syncs it from MySQL to Elasticsearch, with a React frontend.</p>
+          <div class="stack">Go · MySQL · Logstash · Elasticsearch · React</div>
+        </div>
+        <div class="project">
+          <h3>Bank Exchange Rates</h3>
+          <a class="url" href="https://faryne.dev/data/rates">faryne.dev/data/rates</a>
+          <p>A PHP / Laravel backend crawls exchange rates from major Taiwanese banks; a React + Axios frontend reads them through an API. Hosted on Firebase Hosting.</p>
+          <div class="stack">PHP · Laravel · React · Firebase</div>
+        </div>
+        <div class="project">
+          <h3>Taiwan County Statistics</h3>
+          <a class="url" href="https://faryne.dev/data/tw-stats">faryne.dev/data/tw-stats</a>
+          <p>Golang turns the DGBAS XML feeds into JSON stored on GitHub (faryne/tw-stats); a React + Axios frontend reads them in real time.</p>
+          <div class="stack">Go · GitHub · React</div>
+        </div>
+        <div class="project">
+          <h3>Taipower Community Donations</h3>
+          <a class="url" href="https://faryne.dev/data/taipower/neighbor">faryne.dev/data/taipower/neighbor</a>
+          <p>A custom Golang crawler compiles Taipower's community donation records into a database and Elasticsearch for search.</p>
+          <div class="stack">Go · Elasticsearch</div>
+        </div>
+        <div class="project">
+          <h3>Real-time Fire Dispatches</h3>
+          <a class="url" href="https://faryne.dev/data/fire/realtime/">faryne.dev/data/fire/realtime</a>
+          <p>A Golang crawler service collects fire dispatch records from Taiwan's six special municipalities (Tainan and Kaohsiung currently unreachable due to server region limits).</p>
+          <div class="stack">Go · Crawler</div>
+        </div>
+        <div class="project">
+          <h3>Full-stack Integration</h3>
+          <a class="url" href="https://github.com/faryne/integration">github.com/faryne/integration</a>
+          <p>A backend built with Golang + Fiber and a frontend built with React.</p>
+          <div class="stack">Go · Fiber · React</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.credly.com/assets/utilities/embed.js" async></script>
+  <script>
+    document.getElementById('print-btn').addEventListener('click', function () { window.print(); });
+  </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96598-10"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-96598-10');
+  </script>
+</body>
+</html>
